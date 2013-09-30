@@ -1,0 +1,59 @@
+<div class="mid-wrapper">
+	
+	<div>
+		<hgroup id="intro-text">
+			<h1>Jobagrob</h1>
+			<h3>Find jobs you love. Create and distribute job applications digitally.</h3>
+		</hgroup>
+	</div>
+
+	<div>
+		<div id="sign-up">
+			<nav ng-init="showUser=true">
+				<a ng-click="showUser=true" ng-class="{selected: showUser}">User</a>
+				<a ng-click="showUser=false" ng-class="{selected: !showUser}">Company</a>
+			</nav>
+
+			<form class="stacked-inputs" ng-show="showUser" name="user">
+				<legend>User Sign Up</legend>
+				<div class="half-width-wrapper">
+					<label>
+						<input type="text" ng-model="user.firstName" placeholder="First Name" required>
+					</label>
+					<label>
+						<input type="text" ng-model="user.lastName" placeholder="Last Name" required>
+					</label>
+				</div>
+				<label>
+					<input type="email" ng-model="user.email" placeholder="Email" required>
+				</label>
+				<label>
+					<input type="password" ng-model="user.password" placeholder="Password" required>
+				</label>
+				<label>
+					<input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
+				</label>
+				<input type="submit" ng-disabled="user.$invalid || user.password != user.confirmPassword">
+			</form>
+
+			<form class="stacked-inputs" ng-hide="showUser" name="company">
+				<legend>Company Sign Up</legend>
+				<label>
+					<input type="text" ng-model="company.name" placeholder="Company Name" required>
+				</label>
+				<label>
+					<input type="email" ng-model="company.email" placeholder="Email" required>
+				</label>
+				<label>
+					<input type="password" ng-model="company.password" placeholder="Password" required>
+				</label>
+				<label>
+					<input type="password" ng-model="company.confirmPassword" placeholder="Confirm Password" required>
+				</label>
+				<input type="submit" ng-disabled="company.$invalid || company.password != company.confirmPassword">
+			</form>
+
+		</div>
+	</div>
+
+</div>

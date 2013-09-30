@@ -1,0 +1,95 @@
+<!-- attributes and options are accessible in "elem" object -->
+<script type="text/ng-template" id="input.html">
+    <span>Title:</span>
+    <input type="text" ng-model="elem.title">
+    <input ng-init="elem.typeAttr='text'" type="{{elem.typeAttr}}" ng-model="elem.placeholder">
+    <div class="elem-tools">
+        <span>Input Type:</span>
+        <select ng-model="elem.typeAttr">
+            <option>text</option>
+            <option>email</option>
+            <option>number</option>
+        </select>
+        <span>Required</span><input type="checkbox" ng-init="elem.required=true" ng-model="elem.required">
+        <input type="number" ng-init="elem.maxlength=100" ng-model="elem.maxlength">
+    </div>
+</script>
+
+<script type="text/ng-template" id="textarea.html">
+    <span>Title</span>
+    <input type="text" ng-model="elem.title">
+    <textarea name="myTextarea" ng-model="elem.placeholder"></textarea>
+    <div class="elem-tools">
+        <span>Required</span><input type="checkbox" ng-init="elem.required=true" ng-model="elem.required">
+        <input type="number" ng-init="elem.maxlength=500" ng-model="elem.maxlength">
+    </div>
+</script>
+
+<script type="text/ng-template" id="select.html">
+    <label>
+        <span>Form Dropdown:</span>
+        <span>Title</span>
+        <input type="text" ng-model="elem.title">
+        <!-- remove selected option -->
+        <select ng-model="elem.$$selectedOption" ng-options="opt as opt.val for opt in elem.opts">
+        </select>
+    </label>
+    <div class="elem-tools">
+        <ul ng-init="elem.opts = []">
+            <li ng-repeat="opt in elem.opts">
+                <input type="text" ng-model="opt.val"><button ng-click="removeOption(elem.opts, opt)">Remove</button>
+            </li>
+            <button ng-click="addOption(elem)">Add Option</button>
+        </ul>
+    </div>
+</script>
+
+<script type="text/ng-template" id="radio.html">
+
+        <span>Title</span>
+        <input type="text" ng-model="elem.title">
+
+        <form name="myForm" ng-init="elem.radios = []">
+            <label ng-repeat="radio in elem.radios" for="id-{{$index}}">
+                <input type="text" ng-model="radio.val">
+                <input type="radio" ng-model="$parent.selectedRadio" ng-value="$index" id="id-{{$index}}"><button ng-click="removeRadio(elem.radios, radio)">Remove</button>
+            </label>
+            <button ng-click="addRadio(elem)">Add Radio</button>
+        </form>
+</script>
+
+<script type="text/ng-template" id="checkbox.html">
+
+        <span>Title</span>
+        <input type="text" ng-model="elem.title">
+
+        <form name="myForm" ng-init="elem.checkboxes = []">
+            <label ng-repeat="checkbox in elem.checkboxes" for="id-{{$index}}">
+                <input type="text" ng-model="checkbox.val">
+                <input type="checkbox" id="id-{{$index}}"><button ng-click="removeCheckbox(elem.checkboxes, checkbox)">Remove</button>
+            </label>
+            <button ng-click="addCheckbox(elem)">Add Checkbox</button>
+        </form>
+</script>
+
+<form class="form" name="form">
+    <fieldset ng-repeat="f in fieldsets" ng-click="addToFieldset(f)">
+        <legend ng-model="f.legend"><input type="text" placeholder="Title of Question Group..." ng-model="f.legend"></legend>
+        
+        <div ng-repeat="elem in f.elems track by $index">
+            <button ng-click="removeElem(f.elems, elem)">Remove</button>
+            <div ng-include="elem.template"></div>
+        </div>
+
+        <button ng-click="addElem('input.html', f)">Input</button>
+        <button ng-click="addElem('textarea.html', f)">Textarea</button>       
+        <button ng-click="addElem('select.html', f)">Select</button>
+        <button ng-click="addElem('radio.html', f)">Radio</button>
+        <button ng-click="addElem('checkbox.html', f)">Checkbox</button>
+
+    </fieldset>
+    <button ng-click="addFieldset()">Add Fieldset</button>
+    <button ng-click="serialize(fieldsets)">Serialize</button>
+</form>
+
+

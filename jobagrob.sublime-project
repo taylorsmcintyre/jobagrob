@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "mockups"
+		},
+		{
+			"path": "js"
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "views"
+		}
+	]
+}

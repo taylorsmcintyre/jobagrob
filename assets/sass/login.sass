@@ -1,0 +1,35 @@
+#intro-text, #sign-up
+	display: inline-block
+
+#sign-up
+	width: 300px // TODO - STYLE
+	nav a
+		cursor: pointer
+		&.selected
+			font-weight: bold // TODO - STYLE
+
+
+/* reuseable (view-scope) classes */
+
+.mid-wrapper
+	text-align: center
+
+.stacked-inputs 
+	input
+		@include box-sizing(border-box)
+		margin: 0px
+		padding: 10px
+		width: 100%
+		border: 1px solid #ccc // TODO - STYLE
+		margin: 0px
+		&:disabled
+			background: #000 // TODO - STYLE
+	label
+		display: block
+	.half-width-wrapper label
+		width: 50%
+		float: left
+
+/* reuseable (app-scope) classes */
+.button
+	cursor: pointer
