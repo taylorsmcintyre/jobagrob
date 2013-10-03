@@ -40,24 +40,18 @@
 	"buffers":
 	[
 		{
-			"contents": "<div class=\"mid-wrapper\">\n	\n	<hgroup id=\"intro-text\">\n		<h1>Jobagrob</h1>\n		<h3>Find jobs you love. Create and distribute job applications digitally.</h3>\n	</hgroup>\n\n	<div id=\"sign-up\">\n\n	</div>\n\n</div>\n",
-			"file": "views/login/partials/login.html",
-			"file_size": 202,
-			"file_write_time": 1380415131000000,
+			"file": "jobagrob.sublime-project",
 			"settings":
 			{
-				"buffer_size": 204,
+				"buffer_size": 133,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "#intro-text, #sign-up\n	display: inline-block\n\n\n/* reuseable classes */\n\n.mid-wrapper\n	text-align: center",
-			"file": "assets/sass/login.sass",
-			"file_size": 103,
-			"file_write_time": 1380415217000000,
+			"file": "js/routes.coffee",
 			"settings":
 			{
-				"buffer_size": 104,
+				"buffer_size": 379,
 				"line_ending": "Unix"
 			}
 		}
@@ -86,6 +80,8 @@
 	},
 	"file_history":
 	[
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/config.rb",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/index.html",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/README.md",
@@ -211,9 +207,7 @@
 		"/Users/taylormcintyre/Desktop/339 Portfolio Website/css/main.css",
 		"/Users/taylormcintyre/Desktop/339 Portfolio Website/images/eventuall_dimensions_320.jpg",
 		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 15/process.php",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 20/index.php",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 19/index.html",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 18/states_v3.js"
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 20/index.php"
 	],
 	"find":
 	{
@@ -382,23 +376,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "views/login/partials/login.html",
+					"file": "jobagrob.sublime-project",
 					"settings":
 					{
-						"buffer_size": 204,
+						"buffer_size": 133,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								165,
-								165
+								71,
+								71
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -408,23 +403,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "assets/sass/login.sass",
+					"file": "js/routes.coffee",
 					"settings":
 					{
-						"buffer_size": 104,
+						"buffer_size": 379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								379,
+								379
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
