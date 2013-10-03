@@ -1,4 +1,4 @@
-window.jobagrob = angular.module('jobagrob', []).config(($routeProvider) ->
+window.jobagrob = angular.module('jobagrob', ['ngResource']).config(($routeProvider) ->
   $routeProvider.when('/login',
     templateUrl: 'views/login/partials/login.html'
     controller: 'Login'
