@@ -1,13 +1,33 @@
 @import "compass/reset"
 @import "compass/css3"
 
+/* subject to change - use device queries */
+$width-name: max-width
+$mobile-width: 450px
+
+/* variables */
+$med-gray: #a5a5a5
+
+
 /* for dev purposes */
 *
 	@include box-shadow(#aaa 0px 0px 0px 1px inset)
 
-
+/* imports */
 @import "login"
 @import "main"
+
+/* additional resets */
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+
+body
+	zoom: 1
+	font-family: sans-serif
+	*
+		overflow: hidden
 
 h1
 	font-size: 35px
@@ -23,3 +43,33 @@ h4
 
 h5
 	font-size: 16px
+
+
+#wrapper
+	width: 960px
+	margin: 0 auto
+	overflow: hidden
+
+/** reuseable (app-scope) classes **/
+.button
+	cursor: pointer
+
+@media screen and ($width-name : $mobile-width)
+	h1
+		font-size: 28px
+
+	h2
+		font-size: 22px
+
+	h3
+		font-size: 20px
+
+	.mobile-block
+		display: block !important
+	.mobile-no-width
+		@extend .mobile-block
+		width: auto !important
+	.mobile-no-float
+		float: none !important
+	.mobile-all
+		@extend .mobile-no-width, .mobile-no-float

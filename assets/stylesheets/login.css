@@ -1,29 +1,29 @@
-/* line 7, ../sass/login.sass */
+/* line 3, ../sass/login.sass */
 #intro-text, #sign-up {
   display: inline-block;
 }
 
-/* line 10, ../sass/login.sass */
+/* line 6, ../sass/login.sass */
 #sign-up {
   width: 300px;
   padding: 20px;
 }
-/* line 13, ../sass/login.sass */
+/* line 9, ../sass/login.sass */
 #sign-up nav a {
   cursor: pointer;
 }
-/* line 15, ../sass/login.sass */
+/* line 11, ../sass/login.sass */
 #sign-up nav a.selected {
   font-weight: bold;
 }
 
 /*reuseable (view-scope) classes */
-/* line 21, ../sass/login.sass */
+/* line 17, ../sass/login.sass */
 .mid-wrapper {
   text-align: center;
 }
 
-/* line 25, ../sass/login.sass */
+/* line 21, ../sass/login.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -34,30 +34,16 @@
   border: 1px solid #cccccc;
   margin: 0px;
 }
-/* line 32, ../sass/login.sass */
+/* line 28, ../sass/login.sass */
 .stacked-inputs input:disabled {
   background: black;
 }
-/* line 34, ../sass/login.sass */
+/* line 30, ../sass/login.sass */
 .stacked-inputs label {
   display: block;
 }
-/* line 36, ../sass/login.sass */
+/* line 32, ../sass/login.sass */
 .stacked-inputs .half-width-wrapper label {
   width: 50%;
   float: left;
-}
-
-/*reuseable (app-scope) classes */
-/* line 41, ../sass/login.sass */
-.button {
-  cursor: pointer;
-}
-
-@media screen and (max-width: 450px) {
-  /* line 46, ../sass/login.sass */
-  .mobile-no-width {
-    display: block !important;
-    width: auto !important;
-  }
 }

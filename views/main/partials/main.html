@@ -1,25 +1,28 @@
 <h2>Welcome back, Taylor. <span>Your job progress:</span></h2>
 
-<section id="active-jobs">
-	<ul>
-		<li>
+<section id="active-jobs" class="mobile-all">
+	<ul class="job-status" ng-init="jobs = [1,2,3,4]">
+		<h3>Incomplete Job Applications</h3>
+		<li ng-repeat="job in jobs">
 			<div class="progress-bar"></div>
 			<div class="company-logo -size-medium"></div>
 			<h3>New Back-End Development Position</h3>
-			<span>Microsoft, Inc.</span>
-			<button class="button">Continue<span>(40%)</span></button>
+			<span class="mobile-block">Microsoft, Inc.</span>
+			<button class="button mobile-no-float">Continue<span>(40%)</span></button>
 		</li>
 	</ul>
 </section>
 
-<aside id="job-navigation-panel">
-	<div class="job-suggestions">
+<aside id="job-navigation-panel" class="mobile-all">
+	<div class="job-suggestions" ng-init="sugs = [1,2,3,4,5]">
 		<a>View All</a>
 		<h4>Your Opportunities</h4>
 		<ul>
-			<div class="company-logo -size-small"></div>
-			<h5>MongoDB and Mongoose Expert for Data Systems</h5>
-			<span>Newsoft Tech</span>
+			<li ng-repeat="s in sugs">
+				<div class="company-logo -size-small"></div>
+				<h5>MongoDB and Mongoose Expert</h5>
+				<span>Newsoft Tech</span>
+			</li>
 		</ul>
 	</div>
 </aside>

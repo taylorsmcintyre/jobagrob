@@ -63,40 +63,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* subject to change - use device queries */
+/* variables */
 /* for dev purposes */
-/* line 5, ../sass/styles.sass */
+/* line 13, ../sass/styles.sass */
 * {
   -webkit-box-shadow: #aaaaaa 0px 0px 0px 1px inset;
   -moz-box-shadow: #aaaaaa 0px 0px 0px 1px inset;
   box-shadow: #aaaaaa 0px 0px 0px 1px inset;
 }
 
-/* line 7, ../sass/login.sass */
+/* imports */
+/* line 3, ../sass/login.sass */
 #intro-text, #sign-up {
   display: inline-block;
 }
 
-/* line 10, ../sass/login.sass */
+/* line 6, ../sass/login.sass */
 #sign-up {
   width: 300px;
   padding: 20px;
 }
-/* line 13, ../sass/login.sass */
+/* line 9, ../sass/login.sass */
 #sign-up nav a {
   cursor: pointer;
 }
-/* line 15, ../sass/login.sass */
+/* line 11, ../sass/login.sass */
 #sign-up nav a.selected {
   font-weight: bold;
 }
 
 /*reuseable (view-scope) classes */
-/* line 21, ../sass/login.sass */
+/* line 17, ../sass/login.sass */
 .mid-wrapper {
   text-align: center;
 }
 
-/* line 25, ../sass/login.sass */
+/* line 21, ../sass/login.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -107,75 +110,164 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 1px solid #cccccc;
   margin: 0px;
 }
-/* line 32, ../sass/login.sass */
+/* line 28, ../sass/login.sass */
 .stacked-inputs input:disabled {
   background: black;
 }
-/* line 34, ../sass/login.sass */
+/* line 30, ../sass/login.sass */
 .stacked-inputs label {
   display: block;
 }
-/* line 36, ../sass/login.sass */
+/* line 32, ../sass/login.sass */
 .stacked-inputs .half-width-wrapper label {
   width: 50%;
   float: left;
 }
 
+/* line 1, ../sass/main.sass */
+#job-navigation-panel {
+  float: right;
+  width: 300px;
+  height: 100%;
+}
+
+/* line 6, ../sass/main.sass */
+#active-jobs {
+  width: 640px;
+  float: left;
+}
+
+/* line 10, ../sass/main.sass */
+.job-status {
+  padding: 25px;
+}
+/* line 12, ../sass/main.sass */
+.job-status span {
+  color: #a5a5a5;
+}
+/* line 14, ../sass/main.sass */
+.job-status .button {
+  float: right;
+}
+/* line 16, ../sass/main.sass */
+.job-status li h3 {
+  margin-top: 15px;
+}
+
+/* line 19, ../sass/main.sass */
+.company-logo {
+  float: left;
+}
+/* line 21, ../sass/main.sass */
+.company-logo.-size-medium {
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+}
+/* line 25, ../sass/main.sass */
+.company-logo.-size-small {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* line 31, ../sass/main.sass */
+.job-suggestions li {
+  margin: 10px 0px;
+}
+/* line 33, ../sass/main.sass */
+.job-suggestions a {
+  float: right;
+}
+/* line 35, ../sass/main.sass */
+.job-suggestions span {
+  color: #a5a5a5;
+}
+
+/* additional resets */
+/* line 21, ../sass/styles.sass */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* line 26, ../sass/styles.sass */
+body {
+  zoom: 1;
+  font-family: sans-serif;
+}
+/* line 29, ../sass/styles.sass */
+body * {
+  overflow: hidden;
+}
+
+/* line 32, ../sass/styles.sass */
+h1 {
+  font-size: 35px;
+}
+
+/* line 35, ../sass/styles.sass */
+h2 {
+  font-size: 24px;
+}
+
+/* line 38, ../sass/styles.sass */
+h3 {
+  font-size: 22px;
+}
+
+/* line 41, ../sass/styles.sass */
+h4 {
+  font-size: 18px;
+}
+
+/* line 44, ../sass/styles.sass */
+h5 {
+  font-size: 16px;
+}
+
+/* line 48, ../sass/styles.sass */
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 /*reuseable (app-scope) classes */
-/* line 41, ../sass/login.sass */
+/* line 54, ../sass/styles.sass */
 .button {
   cursor: pointer;
 }
 
 @media screen and (max-width: 450px) {
-  /* line 46, ../sass/login.sass */
-  .mobile-no-width {
+  /* line 58, ../sass/styles.sass */
+  h1 {
+    font-size: 28px;
+  }
+
+  /* line 61, ../sass/styles.sass */
+  h2 {
+    font-size: 22px;
+  }
+
+  /* line 64, ../sass/styles.sass */
+  h3 {
+    font-size: 20px;
+  }
+
+  /* line 67, ../sass/styles.sass */
+  .mobile-block, .mobile-no-width, .mobile-all {
     display: block !important;
+  }
+
+  /* line 69, ../sass/styles.sass */
+  .mobile-no-width, .mobile-all {
     width: auto !important;
   }
-}
-/* line 1, ../sass/main.sass */
-#job-navigation-panel {
-  float: right;
-  width: 300px;
-}
 
-/* line 5, ../sass/main.sass */
-.company-logo {
-  float: left;
-}
-/* line 7, ../sass/main.sass */
-.company-logo.-size-medium {
-  width: 70px;
-  height: 70px;
-}
-/* line 10, ../sass/main.sass */
-.company-logo.-size-small {
-  width: 30px;
-  height: 30px;
-}
-
-/* line 12, ../sass/styles.sass */
-h1 {
-  font-size: 35px;
-}
-
-/* line 15, ../sass/styles.sass */
-h2 {
-  font-size: 24px;
-}
-
-/* line 18, ../sass/styles.sass */
-h3 {
-  font-size: 22px;
-}
-
-/* line 21, ../sass/styles.sass */
-h4 {
-  font-size: 18px;
-}
-
-/* line 24, ../sass/styles.sass */
-h5 {
-  font-size: 16px;
+  /* line 72, ../sass/styles.sass */
+  .mobile-no-float, .mobile-all {
+    float: none !important;
+  }
 }
