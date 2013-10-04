@@ -71,31 +71,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: #aaaaaa 0px 0px 0px 1px inset;
 }
 
-/* line 3, ../sass/login.sass */
+/* line 7, ../sass/login.sass */
 #intro-text, #sign-up {
   display: inline-block;
 }
 
-/* line 6, ../sass/login.sass */
+/* line 10, ../sass/login.sass */
 #sign-up {
   width: 300px;
+  padding: 20px;
 }
-/* line 8, ../sass/login.sass */
+/* line 13, ../sass/login.sass */
 #sign-up nav a {
   cursor: pointer;
 }
-/* line 10, ../sass/login.sass */
+/* line 15, ../sass/login.sass */
 #sign-up nav a.selected {
   font-weight: bold;
 }
 
-/* reuseable (view-scope) classes */
-/* line 16, ../sass/login.sass */
+/*reuseable (view-scope) classes */
+/* line 21, ../sass/login.sass */
 .mid-wrapper {
   text-align: center;
 }
 
-/* line 20, ../sass/login.sass */
+/* line 25, ../sass/login.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -106,22 +107,75 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 1px solid #cccccc;
   margin: 0px;
 }
-/* line 27, ../sass/login.sass */
+/* line 32, ../sass/login.sass */
 .stacked-inputs input:disabled {
   background: black;
 }
-/* line 29, ../sass/login.sass */
+/* line 34, ../sass/login.sass */
 .stacked-inputs label {
   display: block;
 }
-/* line 31, ../sass/login.sass */
+/* line 36, ../sass/login.sass */
 .stacked-inputs .half-width-wrapper label {
   width: 50%;
   float: left;
 }
 
-/* reuseable (app-scope) classes */
-/* line 36, ../sass/login.sass */
+/*reuseable (app-scope) classes */
+/* line 41, ../sass/login.sass */
 .button {
   cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+  /* line 46, ../sass/login.sass */
+  .mobile-no-width {
+    display: block !important;
+    width: auto !important;
+  }
+}
+/* line 1, ../sass/main.sass */
+#job-navigation-panel {
+  float: right;
+  width: 300px;
+}
+
+/* line 5, ../sass/main.sass */
+.company-logo {
+  float: left;
+}
+/* line 7, ../sass/main.sass */
+.company-logo.-size-medium {
+  width: 70px;
+  height: 70px;
+}
+/* line 10, ../sass/main.sass */
+.company-logo.-size-small {
+  width: 30px;
+  height: 30px;
+}
+
+/* line 12, ../sass/styles.sass */
+h1 {
+  font-size: 35px;
+}
+
+/* line 15, ../sass/styles.sass */
+h2 {
+  font-size: 24px;
+}
+
+/* line 18, ../sass/styles.sass */
+h3 {
+  font-size: 22px;
+}
+
+/* line 21, ../sass/styles.sass */
+h4 {
+  font-size: 18px;
+}
+
+/* line 24, ../sass/styles.sass */
+h5 {
+  font-size: 16px;
 }

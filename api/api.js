@@ -49,67 +49,40 @@ function isEmpty(object) {
 
 /* static validator */
 var validator = function (errors) {
+    var schemas = {};
 	this.errors = errors;
+
+    this.addSchema = function (name, schema) {
+        schemas[name] = schema;
+    }
+
+    this.getSchema = function (name) {
+        // returns schema with error messages attached to properties
+        return schemas[name];
+    }
+
+    this.check = function (u, v) {
+        var errorObj = {},
+            v = schemas[v];
+
+        for (p in u) {
+            for (x in v[p]) {
+                if(!this.errors[x].check.call(u[p], v[p][x])) {
+                    // push error
+                    if(!errorObj[p]) errorObj[p] = [];
+                    errorObj[p].push(this.errors[x].errorMsg);
+                }
+            }
+        }
+        if(isEmpty(errorObj)) return false; // no errors
+        return errorObj;
+    }
+
 };
 
-validator.prototype.check = function (u, v) {
-    var errorObj = {};
-	for (p in u) {
 
-/*
-		if(!v[p]) {
-			if(!this.errors[x].check.call(u[p], '')) {
-                errorObj[p].push(this.errors[x].errorMsg);	
-			}
-		}
 
-*/
-	    for (x in v[p]) {
-            if(!this.errors[x].check.call(u[p], v[p][x])) {
-                // push error
-                if(!errorObj[p]) errorObj[p] = [];
-                errorObj[p].push(this.errors[x].errorMsg);
-            }
-	    }
-	}
-    if(isEmpty(errorObj)) return false; // no errors
-    return errorObj;
-}
-
-/* example use ******
-
-var myValidator = new validator({
-    minlength: {
-        check: function (num) {
-            return this.length > num
-        },
-        errorMsg: 'minumum length not met'
-    },
-    maxlength: {
-        check: function (num) {
-            return this.length < num
-        },
-        errorMsg: 'maximum length not met'
-    }
-});
-
-var check = myValidator.check({
-    firstName: 'taylor',
-    lastName: 'mcintyre'
-
-}, {
-    firstName: {
-        minlength: 10,
-        maxlength: 100
-    }
-});
-
-console.log(JSON.stringify(check));
-
-******/
-
-/* create instance for validation */
-
+// define a new validator with your validation rules
 var jgStaticValidator = new validator({
     minlength: {
         check: function (num) {
@@ -121,7 +94,7 @@ var jgStaticValidator = new validator({
         check: function (num) {
             return this.length < num
         },
-        errorMsg: 'maximum length not met.'
+        errorMsg: 'maximum length surpassed.'
     },
     required: {
     	check: function (required) {
@@ -132,26 +105,40 @@ var jgStaticValidator = new validator({
     }
 });
 
-
-/* REST Application Interface */
-// requested url via get
-// should not be global - but for testing it's ok
-var signupRequirements = {
+// add a schema for an object
+jgStaticValidator.addSchema('signup', {
     firstName: {
-        minlength: 3,
-        maxlength: 40
+        maxlength: 40,
+        required: true
+    },
+    email: {
+        required: true
+    },
+    lastName: {
+        maxlength: 60,
+        required: true
+    },
+    password: {
+        minlength: 6,
+        maxlength: 30,
         required: true
     }
-}
-
-server.get('/api/signup', function(req, res, next) {
-	res.send(signupRequirements);
-	return next();
 });
+
+
+/* validator instances have three methods, check, addSchema and getSchema
+    check: returns an error object if the passed object doesn't meet the schemas requirements
+           returns false if there are no errors
+    
+    addSchema: add a new scheme for validation
+    
+    getSchema: returns a schema by its name
+*/
+
 
 server.post('/api/signup', function(req, res, next) {
 	
-	var errors = jgStaticValidator.check(req.params, signupRequirements);
+	var errors = jgStaticValidator.check(req.params, 'signup');
 
 	if(!errors) {
 		res.send({

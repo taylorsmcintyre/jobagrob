@@ -2,7 +2,6 @@
 (function() {
   jobagrob.controller('Login', function($scope, signup) {
     console.log('Login View');
-    $scope.signupValidate = signup.get();
     return $scope.signUp = function(user) {
       return signup.save(user);
     };

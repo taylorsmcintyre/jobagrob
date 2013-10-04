@@ -1,44 +1,47 @@
 <div class="mid-wrapper">
 	
-	{{signupValidate}}
-	{{validTwo}}
 	<div>
-		<hgroup id="intro-text">
+		<hgroup id="intro-text" class="mobile-no-width">
 			<h1>Jobagrob</h1>
 			<h3>Find jobs you love. Create and distribute job applications digitally.</h3>
 		</hgroup>
 	</div>
 
 	<div>
-		<div id="sign-up">
+		<div id="sign-up" class="mobile-no-width">
 			<nav ng-init="showUser=true">
 				<a ng-click="showUser=true" ng-class="{selected: showUser}">User</a>
 				<a ng-click="showUser=false" ng-class="{selected: !showUser}">Company</a>
 			</nav>
 
-			<form class="stacked-inputs" ng-show="showUser" name="user" ng-submit="signUp(user)">
+			<form class="stacked-inputs" ng-show="showUser" name="userSignup" ng-submit="signUp(user)" novalidate>
 				<legend>User Sign Up</legend>
 				<div class="half-width-wrapper">
 					<label>
-						<input type="text" ng-model="user.firstName" placeholder="First Name">
+						<input type="text" name="firstName" ng-model="user.firstName" placeholder="First Name" ng-maxlength="40" maxlength="40" required>
+						 <span class="error" ng-show="userSignup.firstName.$error.maxlength">Too long!</span>
 					</label>
 					<label>
-						<input type="text" ng-model="user.lastName" placeholder="Last Name" required>
+						<input type="text" name="lastName" ng-model="user.lastName" placeholder="Last Name" ng-maxlength="60" maxlength="60"  required>
+						 <span class="error" ng-show="userSignup.lastName.$error.maxlength">Too long!</span>
 					</label>
 				</div>
 				<label>
-					<input type="email" ng-model="user.email" placeholder="Email" required>
+					<input type="email" name="email" ng-model="user.email" placeholder="Email" required>
+					<span class="error" ng-show="userSignup.email.$error.email">Invalid email</span>
 				</label>
 				<label>
-					<input type="password" ng-model="user.password" placeholder="Password" required>
+					<input type="password" ng-model="user.password" placeholder="Password" ng-minlength="6" ng-maxlength="6" maxlength="30" required>
 				</label>
 				<label>
 					<input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
+					<span class="error" ng-show="userSignup.email.$error.email">Invalid email</span>
+
 				</label>
-				<input type="submit" ng-disabled="user.$invalid || user.password != user.confirmPassword">
+				<input type="submit" ng-disabled="userSignup.$invalid || user.password != user.confirmPassword">
 			</form>
 
-			<form class="stacked-inputs" ng-hide="showUser" name="company">
+			<form class="stacked-inputs" ng-hide="showUser" name="companySignup">
 				<legend>Company Sign Up</legend>
 				<label>
 					<input type="text" ng-model="company.name" placeholder="Company Name" required>
@@ -52,7 +55,7 @@
 				<label>
 					<input type="password" ng-model="company.confirmPassword" placeholder="Confirm Password" required>
 				</label>
-				<input type="submit" ng-disabled="company.$invalid || company.password != company.confirmPassword">
+				<input type="submit" ng-disabled="companySignup.$invalid || company.password != company.confirmPassword">
 			</form>
 
 		</div>

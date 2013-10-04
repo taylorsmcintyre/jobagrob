@@ -1,17 +1,22 @@
 @import "compass/css3"
 
+// subject to change - use device queries
+$width-name: max-width
+$mobile-width: 450px
+
 #intro-text, #sign-up
 	display: inline-block
 
 #sign-up
 	width: 300px // TODO - STYLE
+	padding: 20px
 	nav a
 		cursor: pointer
 		&.selected
 			font-weight: bold // TODO - STYLE
 
 
-/* reuseable (view-scope) classes */
+/** reuseable (view-scope) classes **/
 
 .mid-wrapper
 	text-align: center
@@ -32,6 +37,12 @@
 		width: 50%
 		float: left
 
-/* reuseable (app-scope) classes */
+/** reuseable (app-scope) classes **/
 .button
 	cursor: pointer
+
+
+@media screen and ($width-name : $mobile-width)
+	.mobile-no-width
+		display: block !important
+		width: auto !important

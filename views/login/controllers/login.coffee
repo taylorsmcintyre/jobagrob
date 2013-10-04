@@ -3,10 +3,6 @@ jobagrob.controller('Login', ($scope, signup) ->
 
 	#$scope.valid = validator.query();
 
-	$scope.signupValidate = signup.get();
-
-
-
 	$scope.signUp = (user) ->
 		signup.save user;
 
