@@ -1,5 +1,5 @@
-jobagrob.factory('signUpValidate', ($resource) ->
+jobagrob.factory('signup', ($resource) ->
 	# return $resource('api/signup/validate')
-	return $resource('http://localhost:port/api/signup/validate', {port: ':8080'});
+	return $resource('http://localhost:port/api/signup', {port: ':8080'});
 
 )
