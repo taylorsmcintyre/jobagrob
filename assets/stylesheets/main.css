@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$med-gray".
-        on line 13 of /Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/main.sass
+        on line 13 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass
 
 Backtrace:
-/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/main.sass:13
+/Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass:13
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/node.rb:40:in `perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -90,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$med-gray\".\A         on line 13 of /Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/main.sass"; }
+  content: "Syntax error: Undefined variable: \"$med-gray\".\A         on line 13 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass"; }

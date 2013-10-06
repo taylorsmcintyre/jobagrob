@@ -39,22 +39,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "jobagrob.sublime-project",
-			"settings":
-			{
-				"buffer_size": 133,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/routes.coffee",
-			"settings":
-			{
-				"buffer_size": 379,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -80,6 +64,8 @@
 	},
 	"file_history":
 	[
+		"/Users/alitorbati/Documents/Projects/jobagrob/jobagrob.sublime-project",
+		"/Users/alitorbati/Documents/Projects/jobagrob/js/routes.coffee",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
 		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/config.rb",
@@ -205,9 +191,7 @@
 		"/Users/taylormcintyre/Desktop/339 Portfolio Website/js/portfolio.js",
 		"/Users/taylormcintyre/Desktop/339 Portfolio Website/statics.html",
 		"/Users/taylormcintyre/Desktop/339 Portfolio Website/css/main.css",
-		"/Users/taylormcintyre/Desktop/339 Portfolio Website/images/eventuall_dimensions_320.jpg",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 15/process.php",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 20/index.php"
+		"/Users/taylormcintyre/Desktop/339 Portfolio Website/images/eventuall_dimensions_320.jpg"
 	],
 	"find":
 	{
@@ -371,62 +355,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "jobagrob.sublime-project",
-					"settings":
-					{
-						"buffer_size": 133,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								71,
-								71
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/routes.coffee",
-					"settings":
-					{
-						"buffer_size": 379,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								379,
-								379
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
