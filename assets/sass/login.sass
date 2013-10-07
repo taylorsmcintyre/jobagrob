@@ -28,29 +28,40 @@ body
 		font-size: 45px
 		padding-bottom: 30px
 		color: #fff
-		text-shadow: 0px 1px 2px rgba(1,1,1,0.5) 
+		text-shadow: 0px 1px 2px rgba(1,1,1,0.5)
+		font-weight: 700
 	h3
+		font-size: 19px
 		padding-bottom: 30px
-		color: #fff
-		text-shadow: 0px 1px 2px rgba(1,1,1,0.5) 
+		color: #eee
+		text-shadow: 0px 1px 2px rgba(1,1,1,0.5)
+		font-style: italic
 
 #sign-up
 	background-color: #eee
 	border-radius: 3px
+	border: 1px solid #ddd
+	border-bottom-color: #c5c5c5
+	background-image: linear-gradient(#fafafa, #eaeaea)
+	background-repeat: repeat-x
 	box-shadow: 0px 0px 30px -10px
+
 
 .stacked-inputs
 	input
 		@include box-sizing(border-box)
-		margin: 0px
-		padding: 10px
+		margin: 5px
+		padding: 11px 10px 9px 10px
 		width: 100%
 		border: 1px solid #ccc // TODO - STYLE
+		border-radius: 3px
+		@include box-shadow(0px 2px 5px 1px rgba(1,1,1,0.1) inset)
 		margin: 0px
 		&:disabled
 			background: #000 // TODO - STYLE
 		&[type=submit]
 			background: #bac
+			box-shadow: none
 	label
 		display: block
 	.half-width-wrapper label

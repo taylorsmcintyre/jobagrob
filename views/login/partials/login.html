@@ -17,7 +17,7 @@
 			</nav>
 
 			<form class="stacked-inputs" ng-show="showUser" name="userSignup" ng-submit="signUp(user)" novalidate>
-				<legend>User Sign Up</legend>
+				<!-- <legend>User Sign Up</legend> -->
 				<div class="half-width-wrapper">
 					<label>
 						<input type="text" name="firstName" ng-model="user.firstName" placeholder="First Name" ng-maxlength="40" maxlength="40" required>
@@ -44,7 +44,7 @@
 			</form>
 
 			<form class="stacked-inputs" ng-hide="showUser" name="companySignup">
-				<legend>Company Sign Up</legend>
+				<!-- <legend>Company Sign Up</legend> -->
 				<label>
 					<input type="text" ng-model="company.name" placeholder="Company Name" required>
 				</label>
