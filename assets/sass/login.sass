@@ -1,7 +1,19 @@
 @import "compass/css3"
 
+#intro-text
+	margin-top: 140px
+
 #intro-text, #sign-up
 	display: inline-block
+	h1
+		font-size: 45px
+		line-height: 50px
+		font-weight: bold
+		margin-bottom: 10px
+	h3
+		font-size: 20px
+		line-height: 25px
+		margin: 20px 0px
 
 #sign-up
 	width: 300px // TODO - STYLE
@@ -10,61 +22,16 @@
 		cursor: pointer
 		&.selected
 			font-weight: bold // TODO - STYLE
+	.form-top-helper
+		padding-bottom: 10px
+		border-bottom: 1px solid #aaa
 
 
 /** reuseable (view-scope) classes **/
-
-body
-	background-color: #1e5799
-	@include filter-gradient(#2bcde2, #0050a0, horizontal)
-	@include background-image(linear-gradient(left top,  #2bcde2 0%,#0050a0 100%))
-
-.mid-wrapper
-	text-align: center
-	position: relative
-	margin-top: 120px
-	font-family: 'Bitter', serif
-	h1
-		font-size: 45px
-		padding-bottom: 30px
-		color: #fff
-		text-shadow: 0px 1px 2px rgba(1,1,1,0.5)
-		font-weight: 700
-	h3
-		font-size: 19px
-		padding-bottom: 30px
-		color: #eee
-		text-shadow: 0px 1px 2px rgba(1,1,1,0.5)
-		font-style: italic
 
 #sign-up
 	background-color: #eee
 	border-radius: 3px
 	border: 1px solid #ddd
-	border-bottom-color: #c5c5c5
-	background-image: linear-gradient(#fafafa, #eaeaea)
-	background-repeat: repeat-x
-	box-shadow: 0px 0px 30px -10px
 
-
-.stacked-inputs
-	input
-		@include box-sizing(border-box)
-		margin: 5px
-		padding: 11px 10px 9px 10px
-		width: 100%
-		border: 1px solid #ccc // TODO - STYLE
-		border-radius: 3px
-		@include box-shadow(0px 2px 5px 1px rgba(1,1,1,0.1) inset)
-		margin: 0px
-		&:disabled
-			background: #000 // TODO - STYLE
-		&[type=submit]
-			background: #bac
-			box-shadow: none
-	label
-		display: block
-	.half-width-wrapper label
-		width: 50%
-		float: left
 

@@ -7,6 +7,7 @@ $mobile-width: 450px
 
 /* variables */
 $med-gray: #a5a5a5
+$green: #19b582
 
 
 /* for dev purposes */
@@ -22,37 +23,75 @@ html, body
 	margin: 0
 	padding: 0
 	height: 100%
+	min-width: 640px
 
 body
+	background: #e5e5e5
 	zoom: 1
 	font-family: sans-serif
 	*
 		overflow: hidden
+	border-top: 5px solid $green
 
 h1
 	font-size: 35px
+	color: $green
 
 h2
 	font-size: 24px
 
 h3
 	font-size: 22px
-
+	color: #7c7c7c
 h4
 	font-size: 18px
 
 h5
 	font-size: 16px
 
+h1, h3
+	font-family: 'Bitter', serif
+
+h1, h2, h3, h4, h5
+	overflow: visible
+
+
 
 #wrapper
 	width: 960px
+	max-width: 100%
 	margin: 0 auto
 	overflow: hidden
 
 /** reuseable (app-scope) classes **/
+
+/* wrappers */
+.mid-wrapper
+	text-align: center
+	position: relative
+
+/* buttons */
 .button
 	cursor: pointer
+
+/* inputs */
+.stacked-inputs
+	input
+		@include box-sizing(border-box)
+		margin: 5px
+		padding: 10px
+		width: 100%
+		border: 1px solid #ccc // TODO - STYLE
+		border-radius: 3px
+		margin: 0px
+		&:disabled
+			background: #000 // TODO - STYLE
+	label
+		display: block
+	.split-inputs-wrapper label
+		width: 50%
+		float: left
+
 
 @media screen and ($width-name : $mobile-width)
 	h1
@@ -64,12 +103,13 @@ h5
 	h3
 		font-size: 20px
 
-	.mobile-block
+	html, body
+		width: auto
+		min-width: 0
+
+	.mobile-reset
 		display: block !important
-	.mobile-no-width
-		@extend .mobile-block
 		width: auto !important
-	.mobile-no-float
 		float: none !important
-	.mobile-all
-		@extend .mobile-no-width, .mobile-no-float
+		clear: none !important
+

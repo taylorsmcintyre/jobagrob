@@ -3,14 +3,15 @@
 <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
 	<div>
-		<hgroup id="intro-text" class="mobile-no-width">
+		<hgroup id="intro-text" class="mobile-reset">
 			<h1>Jobagrob</h1>
-			<h3>Find jobs you love. Create and distribute job applications digitally.</h3>
+			<h3>Digital applications for jobs you love.</h3>
 		</hgroup>
 	</div>
 
 	<div>
-		<div id="sign-up" class="mobile-no-width">
+		<div id="sign-up" class="mobile-reset">
+			<div class="form-top-helper">Sign up as a...</div>
 			<nav ng-init="showUser=true">
 				<a ng-click="showUser=true" ng-class="{selected: showUser}">User</a>
 				<a ng-click="showUser=false" ng-class="{selected: !showUser}">Company</a>
@@ -18,7 +19,7 @@
 
 			<form class="stacked-inputs" ng-show="showUser" name="userSignup" ng-submit="signUp(user)" novalidate>
 				<!-- <legend>User Sign Up</legend> -->
-				<div class="half-width-wrapper">
+				<div class="split-inputs-wrapper">
 					<label>
 						<input type="text" name="firstName" ng-model="user.firstName" placeholder="First Name" ng-maxlength="40" maxlength="40" required>
 						 <span class="error" ng-show="userSignup.firstName.$error.maxlength">Too long!</span>
