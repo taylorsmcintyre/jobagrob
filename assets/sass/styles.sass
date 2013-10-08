@@ -8,6 +8,7 @@ $mobile-width: 450px
 /* variables */
 $med-gray: #a5a5a5
 $green: #19b582
+$dark-green: #11A071
 
 
 /* for dev purposes */
@@ -76,7 +77,14 @@ h1, h2, h3, h4, h5
 /* buttons */
 .button
 	cursor: pointer
-
+	background: $green
+	border-bottom: 2px solid $green
+	&:disabled
+		background: $green
+	border-bottom: 2px solid $dark-green
+	color: white
+	font-size: 16px
+	@include font-bitter
 /* inputs */
 .stacked-inputs
 	input
@@ -87,8 +95,7 @@ h1, h2, h3, h4, h5
 		border: 1px solid #ccc // TODO - STYLE
 		border-radius: 3px
 		margin: 0px
-		&:disabled
-			background: #000 // TODO - STYLE
+
 	label
 		display: block
 	.split-inputs-wrapper label
