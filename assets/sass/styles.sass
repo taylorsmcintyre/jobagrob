@@ -14,9 +14,12 @@ $green: #19b582
 *
 	//@include box-shadow(#aaa 0px 0px 0px 1px inset)
 
-/* imports */
-@import "login"
-@import "main"
+
+/* custom mixins */
+@mixin font-bitter
+	font-family: 'Bitter', serif
+	font-weight: 400
+
 
 /* additional resets */
 html, body
@@ -50,7 +53,7 @@ h5
 	font-size: 16px
 
 h1, h3
-	font-family: 'Bitter', serif
+	@include font-bitter
 
 h1, h2, h3, h4, h5
 	overflow: visible
@@ -112,4 +115,11 @@ h1, h2, h3, h4, h5
 		width: auto !important
 		float: none !important
 		clear: none !important
+
+
+
+/* imports */
+/* imports */
+@import "login"
+@import "main"
 

@@ -8,7 +8,7 @@
 	h1
 		font-size: 45px
 		line-height: 50px
-		font-weight: bold
+		font-weight: 700
 		margin-bottom: 10px
 	h3
 		font-size: 20px
@@ -17,14 +17,28 @@
 
 #sign-up
 	width: 300px // TODO - STYLE
-	padding: 20px
 	nav a
 		cursor: pointer
+		color: #BBB // make variable
+		display: block
+		float: left
+		font-size: 20px
+		padding: 15px 0px
+		@include font-bitter
+		width: 50%
 		&.selected
-			font-weight: bold // TODO - STYLE
+			color: $green
+	form
+		padding: 15px
+		background: #fff
+		border-top: 1px solid #D6D5D5 // make variable
 	.form-top-helper
-		padding-bottom: 10px
-		border-bottom: 1px solid #aaa
+		border-bottom: 1px solid #D6D5D5 // make variable
+		@include font-bitter
+		padding: 20px 0px 13px 0px
+		margin: 0px 17px // visually aligned
+		font-size: 19px
+		color: #BBB // make variable
 
 
 /** reuseable (view-scope) classes **/
