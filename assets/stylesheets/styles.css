@@ -63,12 +63,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* subject to change - use device queries */
 /* variables */
 /* for dev purposes */
 /* custom mixins */
 /* additional resets */
-/* line 26, ../sass/styles.sass */
+/* line 23, ../sass/styles.sass */
 html, body {
   margin: 0;
   padding: 0;
@@ -76,57 +75,20 @@ html, body {
   min-width: 640px;
 }
 
-/* line 32, ../sass/styles.sass */
+/* frame */
+/* line 30, ../sass/styles.sass */
 body {
   background: #e5e5e5;
   zoom: 1;
   font-family: sans-serif;
   border-top: 5px solid #19b582;
 }
-/* line 36, ../sass/styles.sass */
+/* line 34, ../sass/styles.sass */
 body * {
   overflow: hidden;
 }
 
-/* line 40, ../sass/styles.sass */
-h1 {
-  font-size: 35px;
-  color: #19b582;
-}
-
-/* line 44, ../sass/styles.sass */
-h2 {
-  font-size: 24px;
-}
-
-/* line 47, ../sass/styles.sass */
-h3 {
-  font-size: 22px;
-  color: #7c7c7c;
-}
-
-/* line 50, ../sass/styles.sass */
-h4 {
-  font-size: 18px;
-}
-
-/* line 53, ../sass/styles.sass */
-h5 {
-  font-size: 16px;
-}
-
-/* line 56, ../sass/styles.sass */
-h1, h3 {
-  font-family: "Bitter", serif;
-  font-weight: 400;
-}
-
-/* line 59, ../sass/styles.sass */
-h1, h2, h3, h4, h5 {
-  overflow: visible;
-}
-
-/* line 64, ../sass/styles.sass */
+/* line 39, ../sass/styles.sass */
 #wrapper {
   width: 960px;
   max-width: 100%;
@@ -134,19 +96,59 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
 }
 
+/* global styles */
+/* line 46, ../sass/styles.sass */
+h1 {
+  font-size: 35px;
+  color: #19b582;
+}
+
+/* line 50, ../sass/styles.sass */
+h2 {
+  font-size: 24px;
+}
+
+/* line 53, ../sass/styles.sass */
+h3 {
+  font-size: 22px;
+  color: #7c7c7c;
+}
+
+/* line 56, ../sass/styles.sass */
+h4 {
+  font-size: 18px;
+}
+
+/* line 59, ../sass/styles.sass */
+h5 {
+  font-size: 16px;
+}
+
+/* line 62, ../sass/styles.sass */
+h1, h3 {
+  font-family: "Bitter", serif;
+  font-weight: 400;
+}
+
+/* line 65, ../sass/styles.sass */
+h1, h2, h3, h4, h5, span, em, strong, b, u {
+  overflow: visible;
+}
+
 /*reuseable (app-scope) classes */
 /* wrappers */
-/* line 73, ../sass/styles.sass */
+/* line 71, ../sass/styles.sass */
 .mid-wrapper {
   text-align: center;
   position: relative;
 }
 
 /* buttons */
-/* line 78, ../sass/styles.sass */
+/* line 76, ../sass/styles.sass */
 .button {
   cursor: pointer;
   background: #19b582;
+  border: 0;
   border-bottom: 2px solid #19b582;
   border-bottom: 2px solid #11a071;
   color: white;
@@ -154,91 +156,97 @@ h1, h2, h3, h4, h5 {
   font-family: "Bitter", serif;
   font-weight: 400;
 }
-/* line 82, ../sass/styles.sass */
+/* line 81, ../sass/styles.sass */
 .button:disabled {
   background: #19b582;
 }
 
-/* inputs */
+/* line 88, ../sass/styles.sass */
+.text-link {
+  color: #19b582;
+}
 /* line 90, ../sass/styles.sass */
+.text-link:active {
+  color: #11a071;
+}
+
+/* inputs */
+/* line 95, ../sass/styles.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 5px;
   padding: 10px;
   width: 100%;
-  border: 1px solid #cccccc;
   border-radius: 3px;
-  margin: 0px;
 }
-/* line 99, ../sass/styles.sass */
+/* line 100, ../sass/styles.sass */
+.stacked-inputs input:not([type=submit]) {
+  background: #fafafa;
+  border-top: 1px solid #e2e2e2;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+/* line 110, ../sass/styles.sass */
 .stacked-inputs label {
   display: block;
+  padding-bottom: 8px;
 }
-/* line 101, ../sass/styles.sass */
-.stacked-inputs .split-inputs-wrapper label {
-  width: 50%;
-  float: left;
+/* line 114, ../sass/styles.sass */
+.stacked-inputs .split-inputs-wrapper {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  -ms-column-gap: 10px;
+  -o-column-gap: 10px;
+  column-gap: 10px;
 }
 
-@media screen and (max-width: 450px) {
-  /* line 107, ../sass/styles.sass */
-  h1 {
-    font-size: 28px;
-  }
-
-  /* line 110, ../sass/styles.sass */
-  h2 {
-    font-size: 22px;
-  }
-
-  /* line 113, ../sass/styles.sass */
-  h3 {
-    font-size: 20px;
-  }
-
-  /* line 116, ../sass/styles.sass */
-  html, body {
-    width: auto;
-    min-width: 0;
-  }
-
-  /* line 120, ../sass/styles.sass */
-  .mobile-reset {
-    display: block !important;
-    width: auto !important;
-    float: none !important;
-    clear: none !important;
-  }
+/* line 119, ../sass/styles.sass */
+.other-option {
+  color: #19b582;
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 25px;
 }
+
 /* imports */
-/* imports */
-/* line 3, ../sass/login.sass */
+/* line 1, ../sass/login.sass */
 #intro-text {
+  display: inline-block;
   margin-top: 140px;
 }
-
-/* line 6, ../sass/login.sass */
-#intro-text, #sign-up {
-  display: inline-block;
-}
-/* line 8, ../sass/login.sass */
-#intro-text h1, #sign-up h1 {
+/* line 4, ../sass/login.sass */
+#intro-text h1 {
   font-size: 45px;
   line-height: 50px;
   font-weight: 700;
   margin-bottom: 10px;
 }
-/* line 13, ../sass/login.sass */
-#intro-text h3, #sign-up h3 {
+/* line 9, ../sass/login.sass */
+#intro-text h3 {
   font-size: 20px;
   line-height: 25px;
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
-/* line 18, ../sass/login.sass */
+/* line 14, ../sass/login.sass */
 #sign-up {
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  display: inline-block;
   width: 300px;
 }
 /* line 20, ../sass/login.sass */
@@ -248,7 +256,7 @@ h1, h2, h3, h4, h5 {
   display: block;
   float: left;
   font-size: 20px;
-  padding: 15px 0px;
+  padding: 15px 0;
   font-family: "Bitter", serif;
   font-weight: 400;
   width: 50%;
@@ -263,23 +271,15 @@ h1, h2, h3, h4, h5 {
   background: white;
   border-top: 1px solid #d6d5d5;
 }
-/* line 35, ../sass/login.sass */
+/* line 36, ../sass/login.sass */
 #sign-up .form-top-helper {
   border-bottom: 1px solid #d6d5d5;
   font-family: "Bitter", serif;
   font-weight: 400;
-  padding: 20px 0px 13px 0px;
-  margin: 0px 17px;
+  padding: 20px 0 13px 0;
+  margin: 0 17px;
   font-size: 19px;
   color: #bbbbbb;
-}
-
-/*reuseable (view-scope) classes */
-/* line 46, ../sass/login.sass */
-#sign-up {
-  background-color: #eeeeee;
-  border-radius: 3px;
-  border: 1px solid #dddddd;
 }
 
 /* line 1, ../sass/main.sass */
@@ -340,4 +340,37 @@ h1, h2, h3, h4, h5 {
 /* line 35, ../sass/main.sass */
 .job-suggestions span {
   color: #a5a5a5;
+}
+
+/* subject to change - use device queries */
+/* media queries */
+@media screen and (max-width: 450px) {
+  /* line 139, ../sass/styles.sass */
+  h1 {
+    font-size: 28px;
+  }
+
+  /* line 142, ../sass/styles.sass */
+  h2 {
+    font-size: 22px;
+  }
+
+  /* line 145, ../sass/styles.sass */
+  h3 {
+    font-size: 20px;
+  }
+
+  /* line 148, ../sass/styles.sass */
+  html, body {
+    width: auto;
+    min-width: 0;
+  }
+
+  /* line 152, ../sass/styles.sass */
+  .mobile-reset {
+    display: block !important;
+    width: auto !important;
+    float: none !important;
+    clear: none !important;
+  }
 }

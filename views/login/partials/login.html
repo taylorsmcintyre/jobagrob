@@ -38,7 +38,7 @@
 				<label>
 					<input type="password" ng-model="user.confirmPassword" placeholder="Confirm Password" ng-maxlength="30" maxlength="30" required>
 				</label>
-				<input type="submit" class="button" ng-disabled="userSignup.$invalid || user.password != user.confirmPassword">
+				<input type="submit" value="Sign Up" class="button" ng-disabled="userSignup.$invalid || user.password != user.confirmPassword">
 			</form>
 
 			<form class="stacked-inputs" ng-hide="showUser" name="companySignup">
@@ -55,10 +55,12 @@
 				<label>
 					<input type="password" ng-model="company.confirmPassword" placeholder="Confirm Password" required>
 				</label>
-				<input type="submit" class="button" ng-disabled="companySignup.$invalid || company.password != company.confirmPassword">
+				<input type="submit" value="Sign Up" class="button" ng-disabled="companySignup.$invalid || company.password != company.confirmPassword">
 			</form>
 
 		</div>
 	</div>
+
+	<span class="other-option">or <a href="#/login" class="text-link">sign in</a> with your account</span>
 
 </div>

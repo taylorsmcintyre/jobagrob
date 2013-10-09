@@ -1,19 +1,14 @@
 @import "compass/reset"
 @import "compass/css3"
 
-/* subject to change - use device queries */
-$width-name: max-width
-$mobile-width: 450px
-
 /* variables */
 $med-gray: #a5a5a5
 $green: #19b582
 $dark-green: #11A071
 
-
 /* for dev purposes */
 *
-	//@include box-shadow(#aaa 0px 0px 0px 1px inset)
+	//@include box-shadow(#aaa 0 0 0 1px inset)
 
 
 /* custom mixins */
@@ -21,6 +16,8 @@ $dark-green: #11A071
 	font-family: 'Bitter', serif
 	font-weight: 400
 
+@mixin font-open-sans
+	font-family: 'Open Sans', sans-serif
 
 /* additional resets */
 html, body
@@ -29,6 +26,7 @@ html, body
 	height: 100%
 	min-width: 640px
 
+/* frame */
 body
 	background: #e5e5e5
 	zoom: 1
@@ -37,6 +35,14 @@ body
 		overflow: hidden
 	border-top: 5px solid $green
 
+
+#wrapper
+	width: 960px
+	max-width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+/* global styles */
 h1
 	font-size: 35px
 	color: $green
@@ -56,16 +62,8 @@ h5
 h1, h3
 	@include font-bitter
 
-h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5, span, em, strong, b, u
 	overflow: visible
-
-
-
-#wrapper
-	width: 960px
-	max-width: 100%
-	margin: 0 auto
-	overflow: hidden
 
 /** reuseable (app-scope) classes **/
 
@@ -78,6 +76,7 @@ h1, h2, h3, h4, h5
 .button
 	cursor: pointer
 	background: $green
+	border: 0
 	border-bottom: 2px solid $green
 	&:disabled
 		background: $green
@@ -85,24 +84,57 @@ h1, h2, h3, h4, h5
 	color: white
 	font-size: 16px
 	@include font-bitter
+
+.text-link
+	color: $green
+	&:active
+		color: $dark-green
+
 /* inputs */
 .stacked-inputs
 	input
 		@include box-sizing(border-box)
-		margin: 5px
 		padding: 10px
 		width: 100%
-		border: 1px solid #ccc // TODO - STYLE
 		border-radius: 3px
-		margin: 0px
+		&:not([type=submit])
+			background: #fafafa
+			border-top: 1px solid #e2e2e2
+			border-left: 1px solid #ececec
+			border-right: 1px solid #ececec
+			border-bottom: 1px solid #eee
+			font-size: 16px
+			@include font-open-sans
+			margin: 0
 
 	label
 		display: block
-	.split-inputs-wrapper label
-		width: 50%
-		float: left
+		padding-bottom: 8px
+
+	.split-inputs-wrapper
+		@include column-count(2)
+		@include column-gap(10px)
 
 
+.other-option
+	color: $green
+	display: inline-block
+	font-size: 18px
+	@include font-bitter
+	margin-top: 10px
+	line-height: 25px
+
+
+/* imports */
+@import "login"
+@import "main"
+
+
+/* subject to change - use device queries */
+$width-name: max-width
+$mobile-width: 450px
+
+/* media queries */
 @media screen and ($width-name : $mobile-width)
 	h1
 		font-size: 28px
@@ -125,8 +157,4 @@ h1, h2, h3, h4, h5
 
 
 
-/* imports */
-/* imports */
-@import "login"
-@import "main"
 

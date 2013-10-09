@@ -1,10 +1,6 @@
-@import "compass/css3"
-
 #intro-text
-	margin-top: 140px
-
-#intro-text, #sign-up
 	display: inline-block
+	margin-top: 140px
 	h1
 		font-size: 45px
 		line-height: 50px
@@ -13,9 +9,13 @@
 	h3
 		font-size: 20px
 		line-height: 25px
-		margin: 20px 0px
+		margin: 20px 0
 
 #sign-up
+	background-color: #eee
+	border-radius: 3px
+	border: 1px solid #ddd
+	display: inline-block
 	width: 300px // TODO - STYLE
 	nav a
 		cursor: pointer
@@ -23,7 +23,7 @@
 		display: block
 		float: left
 		font-size: 20px
-		padding: 15px 0px
+		padding: 15px 0
 		@include font-bitter
 		width: 50%
 		&.selected
@@ -32,20 +32,14 @@
 		padding: 15px
 		background: #fff
 		border-top: 1px solid #D6D5D5 // make variable
+		
 	.form-top-helper
 		border-bottom: 1px solid #D6D5D5 // make variable
 		@include font-bitter
-		padding: 20px 0px 13px 0px
-		margin: 0px 17px // visually aligned
+		padding: 20px 0 13px 0
+		margin: 0 17px // visually aligned
 		font-size: 19px
 		color: #BBB // make variable
 
-
-/** reuseable (view-scope) classes **/
-
-#sign-up
-	background-color: #eee
-	border-radius: 3px
-	border: 1px solid #ddd
 
 
