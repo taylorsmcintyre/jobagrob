@@ -11,35 +11,42 @@
 		line-height: 25px
 		margin: 20px 0
 
-#sign-up
-	background-color: #eee
-	border-radius: 3px
-	border: 1px solid #ddd
-	display: inline-block
-	width: 300px // TODO - STYLE
-	nav a
-		cursor: pointer
-		color: #BBB // make variable
-		display: block
-		float: left
-		font-size: 20px
-		padding: 15px 0
+#credentials-region
+	#sign-up
+		background-color: #faf8f8
+		border-radius: 3px
+		border: 1px solid #cecccc
+		display: inline-block
+		width: 300px // TODO - STYLE
+		nav a
+			cursor: pointer
+			color: #BBB // make variable
+			display: block
+			float: left
+			font-size: 20px
+			padding: 15px 0
+			@include font-bitter
+			width: 50%
+			&.selected
+				color: $green
+		form
+			padding: 15px
+			background: #fff
+			border-top: 1px solid #D6D5D5 // make variable
+
+		.form-top-helper
+			border-bottom: 1px solid #D6D5D5 // make variable
+			@include font-bitter
+			padding: 20px 0 13px 0
+			margin: 0 17px // visually aligned
+			font-size: 19px
+			color: #BBB // make variable
+	.other-option
+		color: $green
+		font-size: 18px
 		@include font-bitter
-		width: 50%
-		&.selected
-			color: $green
-	form
-		padding: 15px
-		background: #fff
-		border-top: 1px solid #D6D5D5 // make variable
-		
-	.form-top-helper
-		border-bottom: 1px solid #D6D5D5 // make variable
-		@include font-bitter
-		padding: 20px 0 13px 0
-		margin: 0 17px // visually aligned
-		font-size: 19px
-		color: #BBB // make variable
+		margin-top: 10px
+		line-height: 25px
 
 
 

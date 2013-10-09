@@ -75,20 +75,29 @@ html, body {
   min-width: 640px;
 }
 
+/* line 29, ../sass/styles.sass */
+input:focus, select:focus, textarea:focus, button:focus, a:focus {
+  outline: none;
+}
+
 /* frame */
-/* line 30, ../sass/styles.sass */
+/* line 33, ../sass/styles.sass */
 body {
   background: #e5e5e5;
   zoom: 1;
   font-family: sans-serif;
   border-top: 5px solid #19b582;
 }
-/* line 34, ../sass/styles.sass */
+/* line 37, ../sass/styles.sass */
 body * {
   overflow: hidden;
 }
-
 /* line 39, ../sass/styles.sass */
+body h1, body h2, body h3, body h4, body h5, body span, body em, body strong, body b, body u, body label, body form, body input {
+  overflow: visible;
+}
+
+/* line 44, ../sass/styles.sass */
 #wrapper {
   width: 960px;
   max-width: 100%;
@@ -97,54 +106,49 @@ body * {
 }
 
 /* global styles */
-/* line 46, ../sass/styles.sass */
+/* line 51, ../sass/styles.sass */
 h1 {
   font-size: 35px;
   color: #19b582;
 }
 
-/* line 50, ../sass/styles.sass */
+/* line 55, ../sass/styles.sass */
 h2 {
   font-size: 24px;
 }
 
-/* line 53, ../sass/styles.sass */
+/* line 58, ../sass/styles.sass */
 h3 {
   font-size: 22px;
   color: #7c7c7c;
 }
 
-/* line 56, ../sass/styles.sass */
+/* line 61, ../sass/styles.sass */
 h4 {
   font-size: 18px;
 }
 
-/* line 59, ../sass/styles.sass */
+/* line 64, ../sass/styles.sass */
 h5 {
   font-size: 16px;
 }
 
-/* line 62, ../sass/styles.sass */
+/* line 67, ../sass/styles.sass */
 h1, h3 {
   font-family: "Bitter", serif;
   font-weight: 400;
 }
 
-/* line 65, ../sass/styles.sass */
-h1, h2, h3, h4, h5, span, em, strong, b, u {
-  overflow: visible;
-}
-
 /*reuseable (app-scope) classes */
 /* wrappers */
-/* line 71, ../sass/styles.sass */
+/* line 73, ../sass/styles.sass */
 .mid-wrapper {
   text-align: center;
   position: relative;
 }
 
 /* buttons */
-/* line 76, ../sass/styles.sass */
+/* line 78, ../sass/styles.sass */
 .button {
   cursor: pointer;
   background: #19b582;
@@ -155,23 +159,24 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   font-size: 16px;
   font-family: "Bitter", serif;
   font-weight: 400;
+  margin: 0;
 }
-/* line 81, ../sass/styles.sass */
+/* line 83, ../sass/styles.sass */
 .button:disabled {
   background: #19b582;
 }
 
-/* line 88, ../sass/styles.sass */
+/* line 91, ../sass/styles.sass */
 .text-link {
   color: #19b582;
 }
-/* line 90, ../sass/styles.sass */
+/* line 93, ../sass/styles.sass */
 .text-link:active {
   color: #11a071;
 }
 
 /* inputs */
-/* line 95, ../sass/styles.sass */
+/* line 98, ../sass/styles.sass */
 .stacked-inputs input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -180,7 +185,7 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   width: 100%;
   border-radius: 3px;
 }
-/* line 100, ../sass/styles.sass */
+/* line 103, ../sass/styles.sass */
 .stacked-inputs input:not([type=submit]) {
   background: #fafafa;
   border-top: 1px solid #e2e2e2;
@@ -191,12 +196,16 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   font-family: "Open Sans", sans-serif;
   margin: 0;
 }
-/* line 110, ../sass/styles.sass */
+/* line 112, ../sass/styles.sass */
+.stacked-inputs input:not([type=submit]):focus {
+  background: #fdfdfd;
+}
+/* line 115, ../sass/styles.sass */
 .stacked-inputs label {
   display: block;
   padding-bottom: 8px;
 }
-/* line 114, ../sass/styles.sass */
+/* line 119, ../sass/styles.sass */
 .stacked-inputs .split-inputs-wrapper {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -208,17 +217,7 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   -ms-column-gap: 10px;
   -o-column-gap: 10px;
   column-gap: 10px;
-}
-
-/* line 119, ../sass/styles.sass */
-.other-option {
-  color: #19b582;
-  display: inline-block;
-  font-size: 18px;
-  font-family: "Bitter", serif;
-  font-weight: 400;
-  margin-top: 10px;
-  line-height: 25px;
+  overflow: visible;
 }
 
 /* imports */
@@ -241,16 +240,16 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   margin: 20px 0;
 }
 
-/* line 14, ../sass/login.sass */
-#sign-up {
-  background-color: #eeeeee;
+/* line 15, ../sass/login.sass */
+#credentials-region #sign-up {
+  background-color: #faf8f8;
   border-radius: 3px;
-  border: 1px solid #dddddd;
+  border: 1px solid #cecccc;
   display: inline-block;
   width: 300px;
 }
-/* line 20, ../sass/login.sass */
-#sign-up nav a {
+/* line 21, ../sass/login.sass */
+#credentials-region #sign-up nav a {
   cursor: pointer;
   color: #bbbbbb;
   display: block;
@@ -261,18 +260,18 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   font-weight: 400;
   width: 50%;
 }
-/* line 29, ../sass/login.sass */
-#sign-up nav a.selected {
+/* line 30, ../sass/login.sass */
+#credentials-region #sign-up nav a.selected {
   color: #19b582;
 }
-/* line 31, ../sass/login.sass */
-#sign-up form {
+/* line 32, ../sass/login.sass */
+#credentials-region #sign-up form {
   padding: 15px;
   background: white;
   border-top: 1px solid #d6d5d5;
 }
-/* line 36, ../sass/login.sass */
-#sign-up .form-top-helper {
+/* line 37, ../sass/login.sass */
+#credentials-region #sign-up .form-top-helper {
   border-bottom: 1px solid #d6d5d5;
   font-family: "Bitter", serif;
   font-weight: 400;
@@ -280,6 +279,15 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
   margin: 0 17px;
   font-size: 19px;
   color: #bbbbbb;
+}
+/* line 44, ../sass/login.sass */
+#credentials-region .other-option {
+  color: #19b582;
+  font-size: 18px;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 25px;
 }
 
 /* line 1, ../sass/main.sass */
@@ -345,28 +353,28 @@ h1, h2, h3, h4, h5, span, em, strong, b, u {
 /* subject to change - use device queries */
 /* media queries */
 @media screen and (max-width: 450px) {
-  /* line 139, ../sass/styles.sass */
+  /* line 135, ../sass/styles.sass */
   h1 {
     font-size: 28px;
   }
 
-  /* line 142, ../sass/styles.sass */
+  /* line 138, ../sass/styles.sass */
   h2 {
     font-size: 22px;
   }
 
-  /* line 145, ../sass/styles.sass */
+  /* line 141, ../sass/styles.sass */
   h3 {
     font-size: 20px;
   }
 
-  /* line 148, ../sass/styles.sass */
+  /* line 144, ../sass/styles.sass */
   html, body {
     width: auto;
     min-width: 0;
   }
 
-  /* line 152, ../sass/styles.sass */
+  /* line 148, ../sass/styles.sass */
   .mobile-reset {
     display: block !important;
     width: auto !important;

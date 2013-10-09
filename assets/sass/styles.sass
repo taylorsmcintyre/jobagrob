@@ -26,6 +26,9 @@ html, body
 	height: 100%
 	min-width: 640px
 
+input:focus, select:focus, textarea:focus, button:focus, a:focus
+	outline: none
+
 /* frame */
 body
 	background: #e5e5e5
@@ -33,6 +36,8 @@ body
 	font-family: sans-serif
 	*
 		overflow: hidden
+	h1, h2, h3, h4, h5, span, em, strong, b, u, label, form, input
+		overflow: visible
 	border-top: 5px solid $green
 
 
@@ -62,9 +67,6 @@ h5
 h1, h3
 	@include font-bitter
 
-h1, h2, h3, h4, h5, span, em, strong, b, u
-	overflow: visible
-
 /** reuseable (app-scope) classes **/
 
 /* wrappers */
@@ -84,6 +86,7 @@ h1, h2, h3, h4, h5, span, em, strong, b, u
 	color: white
 	font-size: 16px
 	@include font-bitter
+	margin: 0
 
 .text-link
 	color: $green
@@ -97,7 +100,7 @@ h1, h2, h3, h4, h5, span, em, strong, b, u
 		padding: 10px
 		width: 100%
 		border-radius: 3px
-		&:not([type=submit])
+		&:not([type=submit]) // CSS3
 			background: #fafafa
 			border-top: 1px solid #e2e2e2
 			border-left: 1px solid #ececec
@@ -106,6 +109,8 @@ h1, h2, h3, h4, h5, span, em, strong, b, u
 			font-size: 16px
 			@include font-open-sans
 			margin: 0
+			&:focus
+				background: #fdfdfd
 
 	label
 		display: block
@@ -114,21 +119,12 @@ h1, h2, h3, h4, h5, span, em, strong, b, u
 	.split-inputs-wrapper
 		@include column-count(2)
 		@include column-gap(10px)
-
-
-.other-option
-	color: $green
-	display: inline-block
-	font-size: 18px
-	@include font-bitter
-	margin-top: 10px
-	line-height: 25px
+		overflow: visible
 
 
 /* imports */
 @import "login"
 @import "main"
-
 
 /* subject to change - use device queries */
 $width-name: max-width
