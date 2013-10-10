@@ -12,7 +12,7 @@
     console.log('Log In');
     $scope.template = 'login';
     return $scope.logIn = function(credentials) {
-      return logIn.get(credentials);
+      return logIn.save(credentials);
     };
   });
 

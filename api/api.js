@@ -1,42 +1,14 @@
-/* 
-install Brew to install Node and Mongo
-then run: node mongo-restify.js - to compile the js file and execute this script that starts a web server
-then run: mongod to start the mongo database
-*/
+var mongoose = require('mongoose'),
+    restify = require('restify'),
+    server = restify.createServer(),
+    User = require('./user-model');
 
-/* Creation of Server */
-var restify = require('restify'),
-    mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/jobagrob_test');
-
-/*
-var Cat = mongoose.model('Cat', { name: String });
-
-var kitty = new Cat({ name: 'Zildjian' });
-kitty.save(function (err) {
-  if (err) // ...
-  console.log('meow');
+mongoose.connect('mongodb://localhost/jobagrob', function (err) {
+    if(err) throw err;
+    console.log('Successfully connected to Jobagrob Test MongoDB.');
 });
-*/
 
-var Schema = mongoose.Schema;
-
-var userSchema = new Schema({
-    firstName: String,
-    lastName: String,
-    email: String,
-    password: String
-})
-
-userSchema.statics.logIn = function (spec, cb) {
-    this.find(spec, cb);
-}
-
-var User = mongoose.model('User', userSchema);
-
-
-var server = restify.createServer();
 
 /* Server Setup */
 server.use(
@@ -73,7 +45,6 @@ function isEmpty(object) {
     return true; 
 } 
 
-
 /* static validator */
 var validator = function (errors) {
     var schemas = {};
@@ -106,8 +77,6 @@ var validator = function (errors) {
     }
 
 };
-
-
 
 // define a new validator with your validation rules
 var jgStaticValidator = new validator({
@@ -166,38 +135,64 @@ jgStaticValidator.addSchema('signup', {
 
 server.post('/api/signup', function(req, res, next) {
 	
+    /*
 	var errors = jgStaticValidator.check(req.params, 'signup');
-
+    
 	if(!errors) {
-
+    
         var user = new User(req.params);
-
+    
         user.save(function (err) {
             if(err) return; // error message
             res.send({
                 successMsg: 'New User Created.'
             });
         });
-
+    
 	} else {
 		res.send(400, errors);
 	}
-
-	return next();
-});
-
-server.get('/api/login', function(req, res, next) {
     
-    User.logIn(req.params, function (err, user) {
-        res.send(user);
+	return next();*/
+
+
+    // create a user a new user
+    var user = new User(req.params);
+
+    user.save(function (err) {
+        if(err) throw err;
+        res.send({
+            successMsg: 'New User Created.'
+        });
     });
 
-    // must store encrypted passwords
-    // this is really insecure
-
-   // res.send(db.users.find(req.params));
-
     return next();
+});
+
+server.post('/api/login', function (req, res, next) {
+
+    // fetch user and test password verification
+    User.findOne({
+        email: req.params.email
+    }, function (err, user) {
+
+        if(err) throw err;
+        if (!user) return next(new restify.InvalidCredentialsError("Email does not exist.")); // TODO replace with REST Error
+
+        // test a matching password
+        user.comparePassword(req.params.password, function (err, isMatch) {
+
+            if (err) throw err;
+            if(!isMatch) return next(new restify.InvalidCredentialsError("Password incorrect."));
+
+            res.send({
+                successMsg: "Correct credentials."
+            });
+            return next();
+            
+        });
+    });
+
 });
 
 /* when form elements are stored, each element gets a unique ID */

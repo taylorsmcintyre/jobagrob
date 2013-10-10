@@ -14,6 +14,6 @@ jobagrob.controller('LogIn', ($scope, logIn) ->
 	$scope.template = 'login'
 
 	$scope.logIn = (credentials) ->
-		logIn.get credentials
+		logIn.save credentials
 
 )
