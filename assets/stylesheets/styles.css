@@ -221,34 +221,39 @@ h1, h3 {
 }
 
 /* imports */
-/* line 1, ../sass/login.sass */
+/* line 1, ../sass/credentials.sass */
 #intro-text {
   display: inline-block;
   margin-top: 140px;
 }
-/* line 4, ../sass/login.sass */
+/* line 4, ../sass/credentials.sass */
 #intro-text h1 {
   font-size: 45px;
   line-height: 50px;
   font-weight: 700;
   margin-bottom: 10px;
 }
-/* line 9, ../sass/login.sass */
+/* line 9, ../sass/credentials.sass */
 #intro-text h3 {
   font-size: 20px;
   line-height: 25px;
   margin: 20px 0;
 }
 
-/* line 15, ../sass/login.sass */
-#credentials-region #sign-up {
+/* line 15, ../sass/credentials.sass */
+#credentials-region #sign-up, #credentials-region #log-in {
   background-color: #faf8f8;
   border-radius: 3px;
   border: 1px solid #cecccc;
   display: inline-block;
   width: 300px;
 }
-/* line 21, ../sass/login.sass */
+/* line 21, ../sass/credentials.sass */
+#credentials-region #sign-up form, #credentials-region #log-in form {
+  padding: 15px;
+  background: white;
+}
+/* line 26, ../sass/credentials.sass */
 #credentials-region #sign-up nav a {
   cursor: pointer;
   color: #bbbbbb;
@@ -260,17 +265,15 @@ h1, h3 {
   font-weight: 400;
   width: 50%;
 }
-/* line 30, ../sass/login.sass */
+/* line 35, ../sass/credentials.sass */
 #credentials-region #sign-up nav a.selected {
   color: #19b582;
 }
-/* line 32, ../sass/login.sass */
+/* line 37, ../sass/credentials.sass */
 #credentials-region #sign-up form {
-  padding: 15px;
-  background: white;
   border-top: 1px solid #d6d5d5;
 }
-/* line 37, ../sass/login.sass */
+/* line 40, ../sass/credentials.sass */
 #credentials-region #sign-up .form-top-helper {
   border-bottom: 1px solid #d6d5d5;
   font-family: "Bitter", serif;
@@ -280,7 +283,7 @@ h1, h3 {
   font-size: 19px;
   color: #bbbbbb;
 }
-/* line 44, ../sass/login.sass */
+/* line 47, ../sass/credentials.sass */
 #credentials-region .other-option {
   color: #19b582;
   font-size: 18px;

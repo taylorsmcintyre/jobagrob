@@ -40,10 +40,98 @@
 	"buffers":
 	[
 		{
-			"file": "views/login/partials/login.html",
+			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 2807,
+				"buffer_size": 1046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/credentials/partials/signup.html",
+			"settings":
+			{
+				"buffer_size": 2665,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1547,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/credentials/partials/credentials.html",
+			"settings":
+			{
+				"buffer_size": 280,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/routes.coffee",
+			"settings":
+			{
+				"buffer_size": 511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/login.sass",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/credentials.sass",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/styles.sass",
+			"settings":
+			{
+				"buffer_size": 2384,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/credentials/controllers/credentials.coffee",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/credentials/partials/login.html",
+			"settings":
+			{
+				"buffer_size": 667,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/services.coffee",
+			"settings":
+			{
+				"buffer_size": 259,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api/api.js",
+			"settings":
+			{
+				"buffer_size": 5646,
 				"line_ending": "Unix"
 			}
 		}
@@ -72,10 +160,16 @@
 	},
 	"file_history":
 	[
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/controllers/credentials.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/signup.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/sign-in.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/styles.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server.js",
 		"/Users/alitorbati/Documents/Projects/jobagrob/jobagrob.sublime-project",
 		"/Users/alitorbati/Documents/Projects/jobagrob/js/routes.coffee",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
-		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/config.rb",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/index.html",
 		"/Users/taylormcintyre/Documents/projects/Jobagrob/README.md",
@@ -193,13 +287,7 @@
 		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 155/ugs_storefront.js",
 		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 150/storefront.php",
 		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 152/main.css",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 143/default.css",
-		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 145/main.css",
-		"/Users/taylormcintyre/Desktop/states 2/states.js",
-		"/Users/taylormcintyre/Desktop/339 Portfolio Website/js/portfolio.js",
-		"/Users/taylormcintyre/Desktop/339 Portfolio Website/statics.html",
-		"/Users/taylormcintyre/Desktop/339 Portfolio Website/css/main.css",
-		"/Users/taylormcintyre/Desktop/339 Portfolio Website/images/eventuall_dimensions_320.jpg"
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 143/default.css"
 	],
 	"find":
 	{
@@ -218,6 +306,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"emai",
+			"email",
+			"sign-up",
+			"focus",
+			"split",
+			"color",
+			"button",
+			"hidden",
+			"0px",
+			"font-bitt",
+			"dark",
+			"button",
+			".button",
+			"20px",
+			"bottom",
+			"bold",
+			"form top",
+			"border-top",
+			"border-otp",
+			"shadow",
+			"color",
+			"h3",
+			"half",
+			"hald",
+			"half-width-wrapper",
+			"mobile-",
+			"mobile",
+			";",
 			"minlen",
 			"jobApp",
 			"addTemplate",
@@ -317,35 +433,7 @@
 			"#trade-total",
 			"order-com",
 			"order-",
-			"order-number",
-			"#about",
-			"8",
-			"order-complete",
-			"reuse",
-			"h2",
-			"Bold",
-			"bold",
-			"#about h2",
-			"color",
-			"#about",
-			"h2",
-			"#about",
-			"h2",
-			"view",
-			"#about",
-			"reuseable",
-			"left",
-			"#cart ul",
-			"#info",
-			"h2",
-			"35px",
-			"margin-right: 10",
-			"margin-right: 15",
-			"h3",
-			"240",
-			"Highest",
-			"#info h3",
-			"line-height"
+			"order-number"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -363,23 +451,51 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 11,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/login/partials/login.html",
+					"file": "server.js",
 					"settings":
 					{
-						"buffer_size": 2807,
+						"buffer_size": 1046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1463,
-								1463
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/credentials/partials/signup.html",
+					"settings":
+					{
+						"buffer_size": 2665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								17
 							]
 						],
 						"settings":
@@ -389,6 +505,273 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1256,
+								1256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 131.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/credentials/partials/credentials.html",
+					"settings":
+					{
+						"buffer_size": 280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/routes.coffee",
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/sass/login.sass",
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 94.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/sass/credentials.sass",
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "assets/sass/styles.sass",
+					"settings":
+					{
+						"buffer_size": 2384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1975,
+								1975
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1696.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/credentials/controllers/credentials.coffee",
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/credentials/partials/login.html",
+					"settings":
+					{
+						"buffer_size": 667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								551,
+								551
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/services.coffee",
+					"settings":
+					{
+						"buffer_size": 259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "api/api.js",
+					"settings":
+					{
+						"buffer_size": 5646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4865,
+								4865
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2733.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

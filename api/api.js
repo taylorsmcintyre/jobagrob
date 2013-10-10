@@ -5,9 +5,36 @@ then run: mongod to start the mongo database
 */
 
 /* Creation of Server */
-var restify = require('restify');
+var restify = require('restify'),
+    mongoose = require('mongoose');
 
-//var db = require('mongojs').connect('localhost:27017/whippextest01', ['devices']);
+mongoose.connect('mongodb://localhost/jobagrob_test');
+
+/*
+var Cat = mongoose.model('Cat', { name: String });
+
+var kitty = new Cat({ name: 'Zildjian' });
+kitty.save(function (err) {
+  if (err) // ...
+  console.log('meow');
+});
+*/
+
+var Schema = mongoose.Schema;
+
+var userSchema = new Schema({
+    firstName: String,
+    lastName: String,
+    email: String,
+    password: String
+})
+
+userSchema.statics.logIn = function (spec, cb) {
+    this.find(spec, cb);
+}
+
+var User = mongoose.model('User', userSchema);
+
 
 var server = restify.createServer();
 
@@ -111,12 +138,13 @@ jgStaticValidator.addSchema('signup', {
         maxlength: 40,
         required: true
     },
-    email: {
-        required: true
-    },
     lastName: {
         maxlength: 60,
         required: true
+    },
+    email: {
+        required: true,
+        maxlength: 70
     },
     password: {
         minlength: 6,
@@ -141,14 +169,35 @@ server.post('/api/signup', function(req, res, next) {
 	var errors = jgStaticValidator.check(req.params, 'signup');
 
 	if(!errors) {
-		res.send({
-			successMsg: 'Valid Data.'
-		});
+
+        var user = new User(req.params);
+
+        user.save(function (err) {
+            if(err) return; // error message
+            res.send({
+                successMsg: 'New User Created.'
+            });
+        });
+
 	} else {
 		res.send(400, errors);
 	}
 
 	return next();
+});
+
+server.get('/api/login', function(req, res, next) {
+    
+    User.logIn(req.params, function (err, user) {
+        res.send(user);
+    });
+
+    // must store encrypted passwords
+    // this is really insecure
+
+   // res.send(db.users.find(req.params));
+
+    return next();
 });
 
 /* when form elements are stored, each element gets a unique ID */
