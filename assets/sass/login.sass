@@ -13,19 +13,19 @@
 
 #credentials-region
 	#sign-up, #log-in
-		background-color: #faf8f8	
+		background-color: $white	
 		border-radius: 3px
-		border: 1px solid #cecccc
+		border: 1px solid $accent-gray
 		display: inline-block
 		width: 300px // TODO - STYLE
 		form
 			padding: 15px
-			background: #fff
+			background: $white
 
 	#sign-up
 		nav a
 			cursor: pointer
-			color: #BBB // make variable
+			color: $accent-gray
 			display: block
 			float: left
 			font-size: 20px
@@ -33,19 +33,19 @@
 			@include font-bitter
 			width: 50%
 			&.selected
-				color: $green
+				color: $light-green
 		form
-			border-top: 1px solid #D6D5D5 // make variable
+			border-top: 1px solid $accent-gray
 
 		.form-top-helper
-			border-bottom: 1px solid #D6D5D5 // make variable
+			border-bottom: 1px solid $accent-gray
 			@include font-bitter
 			padding: 20px 0 13px 0
 			margin: 0 17px // visually aligned
 			font-size: 19px
-			color: #BBB // make variable
+			color: $accent-gray
 	.other-option
-		color: $green
+		color: $light-green
 		font-size: 18px
 		@include font-bitter
 		margin-top: 10px

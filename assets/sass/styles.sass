@@ -2,9 +2,16 @@
 @import "compass/css3"
 
 /* variables */
-$med-gray: #a5a5a5
-$green: #19b582
-$dark-green: #11A071
+$white: #ffffff
+$light-gray: #f1f1f1
+$accent-gray: #bfbfbf
+$dark-gray: #969696
+$black: #5a5a5a
+
+$light-green: #37ab4a
+$dark-green: #2f8943
+
+$background: #e6e6e6
 
 /* for dev purposes */
 *
@@ -31,14 +38,14 @@ input:focus, select:focus, textarea:focus, button:focus, a:focus
 
 /* frame */
 body
-	background: #e5e5e5
+	background: $background
 	zoom: 1
 	font-family: sans-serif
 	*
 		overflow: hidden
 	h1, h2, h3, h4, h5, span, em, strong, b, u, label, form, input
 		overflow: visible
-	border-top: 5px solid $green
+	border-top: 5px solid $light-green
 
 
 #wrapper
@@ -50,14 +57,14 @@ body
 /* global styles */
 h1
 	font-size: 35px
-	color: $green
+	color: $light-green
 
 h2
 	font-size: 24px
 
 h3
 	font-size: 22px
-	color: #7c7c7c
+	color: $black
 h4
 	font-size: 18px
 
@@ -77,11 +84,12 @@ h1, h3
 /* buttons */
 .button
 	cursor: pointer
-	background: $green
+	background: $light-green
 	border: 0
-	border-bottom: 2px solid $green
+	border-bottom: 2px solid $dark-green
 	&:disabled
-		background: $green
+		background: $light-green
+		color: $dark-green
 	border-bottom: 2px solid $dark-green
 	color: white
 	font-size: 16px
@@ -89,7 +97,7 @@ h1, h3
 	margin: 0
 
 .text-link
-	color: $green
+	color: $light-green
 	&:active
 		color: $dark-green
 
@@ -101,11 +109,12 @@ h1, h3
 		width: 100%
 		border-radius: 3px
 		&:not([type=submit]) // CSS3
-			background: #fafafa
-			border-top: 1px solid #e2e2e2
-			border-left: 1px solid #ececec
-			border-right: 1px solid #ececec
-			border-bottom: 1px solid #eee
+			background: $light-gray
+			//border-top: 1px solid #e2e2e2
+			//border-left: 1px solid #ececec
+			//border-right: 1px solid #ececec
+			//border-bottom: 1px solid #eee
+			border: 1px solid $accent-gray
 			font-size: 16px
 			@include font-open-sans
 			margin: 0

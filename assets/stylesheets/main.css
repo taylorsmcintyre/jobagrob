@@ -1,5 +1,5 @@
 /*
-Syntax error: Undefined variable: "$med-gray".
+Syntax error: Undefined variable: "$light-gray".
         on line 13 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass
 
 Backtrace:
@@ -90,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$med-gray\".\A         on line 13 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass"; }
+  content: "Syntax error: Undefined variable: \"$light-gray\".\A         on line 13 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/main.sass"; }
