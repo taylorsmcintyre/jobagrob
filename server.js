@@ -1,13 +1,11 @@
 var express = require('express'),
     app = express(),
-    ObjectID = require('mongodb').ObjectID,
     mongoose = require('mongoose'),
     Account = require('./server/schemas/account-model'),
-    User = require('./server/schemas/user-model'),
-    Company = require('./server/schemas/company-model'),
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    routes = require('./server/routes');
+    routes = require('./server/routes'),
+    handler = require('restify-errors');
 
 mongoose.connect('mongodb://localhost/jobagrob', function (err) {
     if(err) throw err;
@@ -23,8 +21,15 @@ app.configure(function() {
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(app.router);
+  app.use(clientErrorHandler);
   routes.setup(app);
 });
+
+
+function clientErrorHandler(err, req, res, next) {
+  if(err.statusCode) return res.send(err.statusCode, err);
+  return res.send(new handler.InternalError('Something went wrong.'));
+}
 
 
 passport.use(new LocalStrategy({
@@ -53,7 +58,7 @@ passport.serializeUser(function(account, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-  Account.find({_id: ObjectID(id)}, function (err, account) {
+  Account.findById(id, function (err, account) {
     done(err, account);
   });
 });

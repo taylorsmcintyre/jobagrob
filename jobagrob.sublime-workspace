@@ -1,0 +1,425 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Test",
+				"TestRestful"
+			],
+			[
+				"Variable_List",
+				"Variable_List_Items"
+			],
+			[
+				"selected",
+				"selectedVariableItem"
+			],
+			[
+				"app",
+				"appConfig"
+			],
+			[
+				"inline-",
+				"inline-table"
+			],
+			[
+				"push",
+				"pushDisable"
+			],
+			[
+				"production_task_",
+				"production_task_id"
+			],
+			[
+				"query_",
+				"query_db"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server/routes.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/client/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/static/public/views/credentials/partials/credentials.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/static/public/js/routes.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/static/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/schema-plugins/update.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/route-plugins/auth.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/auth-plugins/basic.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/node_modules/passport-oauth/node_modules/passport-oauth1/README.md",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/schemas/userSchema.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/controllers/sample/auth-controller.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/schema-plugins/password.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api-server/app/schemas/sessionSchema.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api/api.js",
+		"/Users/taylormcintyre/Desktop/node-poc-api-server-master/app/route-plugins/auth.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api/company-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api/user-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api/old-validator.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/js/services.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/partials/login.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/partials/signup.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/partials/credentials.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/controllers/credentials.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/credentials/controllers/credentials.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/server.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/README.md",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/responsive.png",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4873.JPG",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4872.JPG",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4871.JPG",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4870.JPG",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/Meeting notes/IMG_4869.JPG",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/main.png",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/login.png",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/mockups/login.ai",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/index.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/config.rb",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/styles.css",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/main.css",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/login.css",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/main.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/credentials.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/api/account-abstract-model.js",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/stylesheets/credentials.css",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/styles.sass",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/js/services.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/js/routes.coffee",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/login.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/signup.html",
+		"/Users/taylormcintyre/Documents/projects/jobagrob/views/login/partials/sign-in.html",
+		"/Users/alitorbati/Documents/Projects/jobagrob/jobagrob.sublime-project",
+		"/Users/alitorbati/Documents/Projects/jobagrob/js/routes.coffee",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/config.rb",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/index.html",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/README.md",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/server.js",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/styles.css",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/sass/screen.scss",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/login/partials/login.html",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/login.sass",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/assets/stylesheets/styles.sass",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/generator.coffee",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/jobagrob.sublime-project",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.js",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/generator/controllers/main.coffee",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/views/main/controllers/main.js",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/modules/generator/generator.html",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/js/something.coffee",
+		"/Users/taylormcintyre/Documents/projects/Jobagrob/js/routes.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 99/receipt.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 64/orders.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 65/completed.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 56/index.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 24/main.js",
+		"/Users/taylormcintyre/Desktop/whippex_new/css/main.css",
+		"/Users/taylormcintyre/Desktop/whippex_new/css/theme.css",
+		"/Users/taylormcintyre/Desktop/whippex_new/partials/about.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder/theme.css",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 15/device-options.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 11/main.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 20/directives.css",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 21/cart.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 1/main.css",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 14/dropdown.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 111/current.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 105/orders.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 18/pdo_functions.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 16/internal.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 19/orders.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 103/main.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 20/main.js",
+		"/Users/taylormcintyre/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 18/internal.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 111/style.css",
+		"/Users/taylormcintyre/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 16/raphael-spinner.css",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 396/device-options.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 444/internal.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 403/storefront.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 323/new_product.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 346/jquery.canvasResize.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 342/friends.json",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 337/newfile.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 341/person.json",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 338/index.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 326/user_image_preview.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 303/home.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 298/index.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 307/clubs-concentrations.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 301/routes.js",
+		"/Users/taylormcintyre/Desktop/Kernels/angular/routes.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 198/storefront.js",
+		"/Users/taylormcintyre/Desktop/fileHandler.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 291/prefrences.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 199/storefront.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 212/index.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 236/admin.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 232/admin.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 282/main.css",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 287/product.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 204/cart.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 239/create_category.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 234/storefront-admin.js",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 238/new_product.html",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 189/index.php",
+		"/Users/taylormcintyre/Library/Caches/Cleanup At Startup/com.fetchsoftworks.Fetch/Fetch Temporary Folder 175/upload.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console.log",
+			"check",
+			"des",
+			"mongoose",
+			"mongooose",
+			"method not",
+			"not allow",
+			".use",
+			"use",
+			"public",
+			"index",
+			"serve",
+			"index.html",
+			"sendFile",
+			"restify",
+			"to see if the user is logged in",
+			"Account",
+			"bodyParser",
+			"asset",
+			"send index",
+			"createServer",
+			"hal",
+			"authorization",
+			"keep-alive",
+			"authenticate",
+			"BasicStrategy",
+			"auth-plugins/",
+			"BasicStrategy",
+			".authenticate",
+			"BasicStrategy.authenticate",
+			"basicStrategy",
+			"basicstrate",
+			"encrypt",
+			"authenticate",
+			"authen",
+			"password",
+			"login/basic",
+			"u",
+			"params",
+			"'user'",
+			"findOne",
+			"user",
+			"req.path",
+			"formatError",
+			"login/basic",
+			"basic/login",
+			"getPath",
+			"findOne",
+			"users",
+			"save",
+			"CHECK",
+			"false",
+			"store",
+			"session",
+			"sessions",
+			"checklogin",
+			"n the user in to see if the user is logged in",
+			"local",
+			"restify",
+			"restifyex",
+			"restify",
+			"createServer",
+			"session",
+			"client-session",
+			"user",
+			"app",
+			"configure",
+			"extend",
+			"User",
+			"req",
+			"send",
+			"signUp",
+			"account",
+			"log",
+			"consol.elog",
+			"company",
+			"User",
+			"compan",
+			"comapny",
+			"validation",
+			"validation error",
+			"signUp",
+			"signUpp",
+			"User",
+			"accent-",
+			"acc-ent",
+			"$white",
+			"white",
+			"return",
+			"params",
+			"username",
+			"xx",
+			"User",
+			"user",
+			"users",
+			"user",
+			"users",
+			"save",
+			"users",
+			"cats",
+			"users",
+			"UserSchema",
+			"emai",
+			"email",
+			"sign-up",
+			"focus",
+			"split",
+			"color",
+			"button",
+			"hidden",
+			"0px",
+			"font-bitt",
+			"dark",
+			"button",
+			".button",
+			"20px",
+			"bottom",
+			"bold",
+			"form top",
+			"border-top",
+			"border-otp",
+			"shadow",
+			"color",
+			"h3",
+			"half",
+			"hald",
+			"half-width-wrapper",
+			"mobile-"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 297.0,
+	"status_bar_visible": true
+}

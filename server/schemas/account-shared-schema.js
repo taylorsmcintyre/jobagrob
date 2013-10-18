@@ -1,7 +1,8 @@
 var ObjectID = require('mongodb').ObjectID,
     mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    bcrypt = require('bcrypt');
+    bcrypt = require('bcrypt'),
+    Account = require('./account-model');
 
 var accountSharedSchema = new Schema({
     _accountId: {
@@ -9,5 +10,14 @@ var accountSharedSchema = new Schema({
         required: true
     }
 });
+
+accountSharedSchema.methods.findById = function (id, cb) {
+	var _this = this;
+    Account.findById(id, function (err, account) {
+	  _this.findOne({_accountId: account._id}, function (err, u) {
+	    cb(err, u);
+	  });
+    });
+};
 
 module.exports = accountSharedSchema;

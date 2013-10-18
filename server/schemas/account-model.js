@@ -1,16 +1,17 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcrypt'),
-    SALT_WORK_FACTOR = 10;
+    SALT_WORK_FACTOR = 10,
+    ObjectID = require('mongodb').ObjectID,
+    User = require('./user-model'),
+    Company = require('./company-model');
 
 
 var accountSchema = new Schema({
     email: {
         type: String,
         required: true,
-        index: {
-            unique: true
-        }
+        unique: true
     },
     password: {
         type: String,
@@ -49,6 +50,12 @@ accountSchema.methods.comparePassword = function (candidatePassword, cb) {
         cb(null, isMatch);
     });
 };
+
+accountSchema.methods.findById = function (id, cb) {
+  this.findOne({_id: ObjectID(id)}, function (err, account) {
+    cb(err, account);
+  });
+}
 
 
 module.exports = mongoose.model('Account', accountSchema);
