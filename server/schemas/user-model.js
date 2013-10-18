@@ -1,11 +1,9 @@
 var mongoose = require('mongoose'),
-    extend = require('mongoose-schema-extend'),
     Schema = mongoose.Schema,
-    bcrypt = require('bcrypt'),
-    SALT_WORK_FACTOR = 10,
-    accountSchema = require('./account-abstract-model');
+    extend = require('mongoose-schema-extend'),
+    accountSharedSchema = require('./account-shared-schema');
 
-var userSchema = accountSchema.extend({
+var userSchema = accountSharedSchema.extend({
     firstName: {
         type: String,
         required: true

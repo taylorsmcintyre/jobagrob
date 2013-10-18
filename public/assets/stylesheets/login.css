@@ -1,10 +1,14 @@
 /*
-Syntax error: Undefined variable: "$light-gray".
-        on line 16 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/credentials.sass
+Syntax error: Undefined variable: "$accent-gray".
+        on line 18 of /Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass
 
 Backtrace:
-/Users/alitorbati/Documents/Projects/jobagrob/assets/sass/credentials.sass:16
+/Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass:18
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/node.rb:40:in `perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `_perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/list.rb:70:in `_perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/script/node.rb:40:in `perform'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:298:in `visit_prop'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
@@ -90,4 +94,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$light-gray\".\A         on line 16 of /Users/alitorbati/Documents/Projects/jobagrob/assets/sass/credentials.sass"; }
+  content: "Syntax error: Undefined variable: \"$accent-gray\".\A         on line 18 of /Users/taylormcintyre/Documents/projects/jobagrob/assets/sass/login.sass"; }

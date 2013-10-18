@@ -8,6 +8,10 @@
     return $resource('http://localhost:port/api/login', {
       port: ':8080'
     });
+  }).factory('checkLogIn', function($resource) {
+    return $resource('http://localhost:port/api/checklogin', {
+      port: ':8080'
+    });
   });
 
 }).call(this);
