@@ -11,13 +11,17 @@ var accountSharedSchema = new Schema({
     }
 });
 
-accountSharedSchema.methods.findById = function (id, cb) {
-	var _this = this;
-    Account.findById(id, function (err, account) {
-	  _this.findOne({_accountId: account._id}, function (err, u) {
-	    cb(err, u);
-	  });
+accountSharedSchema.statics.findByAccountId = function (id, cb) {
+    this.findOne({_accountId: id}, function (err, account) {
+        if(err) return next(err);
+        cb(null, account);
     });
-};
+}
+
+/* these are methods avaliable on both user and company models and has access to the user/company properties */
+accountSharedSchema.methods.getFirstName = function (cb) {
+    cb(null, this.firstName);
+}
+
 
 module.exports = accountSharedSchema;

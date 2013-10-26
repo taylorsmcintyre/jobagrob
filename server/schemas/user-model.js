@@ -6,13 +6,16 @@ var mongoose = require('mongoose'),
 var userSchema = accountSharedSchema.extend({
     firstName: {
         type: String,
-        required: true
+        required: true,
+        maxLength: 40,
+        trim: true
     },
     lastName: {
         type: String,
-        required: true
+        required: true,
+        maxLength: 60,
+        trim: true
     }
 });
-
 
 module.exports = mongoose.model('User', userSchema);

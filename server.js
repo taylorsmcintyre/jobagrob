@@ -63,9 +63,6 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-
-
-
 app.listen(8080, function () {
     console.log('jobagrob active...')
 });

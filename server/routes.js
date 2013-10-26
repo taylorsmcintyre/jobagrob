@@ -2,6 +2,7 @@ var passport = require('passport'),
     handler = require('restify-errors'),
 	Account = require('./schemas/account-model'),
     User = require('./schemas/user-model'),
+    Job = require('./schemas/job-model'),
     Company = require('./schemas/company-model');
 
 function formatResponse (msg) {
@@ -10,30 +11,42 @@ function formatResponse (msg) {
 	}
 }
 
-function setup(app) {
+/* middlewares */
+function logOut(req, res, next) {
+	delete req.account;
+	req.logOut();
+	return next();
+}
 
+function checkAuth(req, res, next) {
+	if(!req.isAuthenticated()) return next(new handler.NotAuthorizedError('Not logged in.'));
+	return next();
+}
 
-	app.post('/api/login', passport.authenticate('local'), function (req, res, next) {
-	    User.findById(req.user._id, function(err, account) {
-	    	res.send({acct: account});
-	    });
-		//res.send({auth: req.isAuthenticated(), user: req.user});
+function account(req, res, next) {
+	Account.getAccountInstanceById(req.user._id, function (err, account) {
+		req.account = account;
+		return next();
 	});
+}
+
+function setup(app) {
 
 	app.post('/api/signup', function (req, res, next) {
 	
-
 	    var account = new Account({ email: req.body.email, password: req.body.password, type: req.body.type }),
 	        user,
 	        company,
 	        accountId;
 
 	    account.save(function (err, account) {
-	        
+
 	    	// account creation error handling
 	    	if(err) {
 		        if(err.name === 'MongoError') return next(new handler.InvalidArgumentError('Account with that email already exists.'));
-		        if(err.name === 'ValidationError') return next(new handler.InvalidContentError('Validation unsuccessful.'));
+		        // TODO figure out more elegant way to report validation errors
+		        //if(err.name === 'ValidationError') return next(new handler.InvalidContentError(err));
+				if(err.name === 'ValidationError') return next(new handler.InvalidContentError('Validation Error.'));
 	    		return next(err);
 	    	}
 
@@ -58,8 +71,40 @@ function setup(app) {
 	
 	});
 
+	app.post('/api/login', logOut, passport.authenticate('local'), function (req, res, next) {
+
+	    Account.findById(req.user._id, function (err, account) {
+	    	if(err) return next(err);
+	    	res.send(formatResponse('logged in.'));
+	    })
+		
+	});
+
+	app.post('/api/logout', logOut);
+
+/*
 	app.post('/api/checklogin', function(req, res, next) {
-	    res.send({auth: req.isAuthenticated(), user: req.user});
+	    res.send({auth: req.isAuthenticated()});
+	});
+*/
+
+	app.post('/api/checklogin', checkAuth, account, function (req, res, next) {
+
+		req.account.getFirstName(function (err, fname) {
+			res.send({
+				name: fname
+			});
+		})
+
+	});
+
+	/* JOBS */
+	app.post('/api/jobs/create', function (req, res, next) {
+		var job = new Job(req.body);
+
+		job.save(function (err, job) {
+			res.send(job);
+		});
 	});
 
 }

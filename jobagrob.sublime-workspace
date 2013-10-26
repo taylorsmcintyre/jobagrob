@@ -39,6 +39,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 1904,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/schemas/account-model.js",
+			"settings":
+			{
+				"buffer_size": 1550,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes.js",
+			"settings":
+			{
+				"buffer_size": 2044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/schemas/account-shared-schema.js",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -210,6 +242,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"error",
+			"_id",
+			"params",
+			"log",
+			"console",
+			"O",
+			"User",
+			"Account",
 			"console.log",
 			"check",
 			"des",
@@ -329,15 +369,7 @@
 			"bottom",
 			"bold",
 			"form top",
-			"border-top",
-			"border-otp",
-			"shadow",
-			"color",
-			"h3",
-			"half",
-			"hald",
-			"half-width-wrapper",
-			"mobile-"
+			"border-top"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -355,8 +387,118 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 1904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								943,
+								943
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server/schemas/account-model.js",
+					"settings":
+					{
+						"buffer_size": 1550,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1225,
+								1225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/routes.js",
+					"settings":
+					{
+						"buffer_size": 2044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/schemas/account-shared-schema.js",
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

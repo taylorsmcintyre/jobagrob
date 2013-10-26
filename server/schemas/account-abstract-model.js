@@ -1,14 +1,16 @@
-var mongoose = require('mongoose'),
+/*var mongoose = require('mongoose'),
     extend = require('mongoose-schema-extend'),
     Schema = mongoose.Schema,
     bcrypt = require('bcrypt'),
-    SALT_WORK_FACTOR = 10;
+    SALT_WORK_FACTOR = 10,
+    validate = require('../plugins/validation-regexp.js');
 
 
 var accountSchema = new Schema({
     email: {
         type: String,
         required: true,
+        validate: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
         index: {
             unique: true
         }
@@ -49,3 +51,4 @@ accountSchema.methods.comparePassword = function (candidatePassword, cb) {
 
 
 module.exports = accountSchema;
+*/
